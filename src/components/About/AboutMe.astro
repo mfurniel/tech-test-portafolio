@@ -7,7 +7,7 @@ import TechBox from "./TechBox.astro";
 <div
   class="flex min-h-screen w-screen flex-col items-center justify-center p-8"
 >
-  <div class="max-w-6xl">
+  <div class="mb-4 max-w-6xl">
     <h1 class="mb-10 text-left text-4xl font-bold text-blue-900">Sobre mí</h1>
     <div
       class="flex flex-col items-center justify-center gap-6 lg:flex-row lg:items-start"
@@ -60,19 +60,38 @@ import TechBox from "./TechBox.astro";
         </a>
       </div>
     </div>
-    <div class="mt-6 flex flex-wrap justify-center gap-6 text-xl">
-      <TechBox name="Git" />
-      <TechBox name="GitHub" />
-      <TechBox name="Flutter" />
-      <TechBox name="React" />
-      <TechBox name="Vue" />
-      <TechBox name="JavaScript" />
-      <TechBox name="TypeScript" />
-      <TechBox name="Ruby on Rails" />
-      <TechBox name="PostgreSQL" />
-      <TechBox name="Python" />
-      <TechBox name="CSS" />
-    </div>
+  </div>
+  <div
+    class="mt-8 mb-8 grid grid-cols-2 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6"
+  >
+    <TechBox name="Git" icon="git" description="Control de Versiones" />
+    <TechBox name="GitHub" icon="github" description="Repositorios" />
+    <TechBox name="Flutter" icon="flutter" description="Práctica Profesional" />
+    <TechBox name="React" icon="react" description="Memoria de Título" />
+    <TechBox name="Vue" icon="vue" description="Trabajando en Eskuad" />
+    <TechBox
+      name="JavaScript"
+      icon="javascript"
+      description="Memoria de Título"
+    />
+    <TechBox
+      name="TypeScript"
+      icon="typescript"
+      description="Aplicado a Proyectos Personales"
+    />
+    <TechBox
+      name="Ruby on Rails"
+      icon="rails"
+      description="Proyecto Personal"
+    />
+    <TechBox
+      name="PostgreSQL"
+      icon="postgresql"
+      description="Base de datos Pyme"
+    />
+    <TechBox name="Python" icon="python" description="Api Rest con Flask" />
+    <TechBox name="CSS" icon="css" description="Estilo y Diseño" />
+    <TechBox name="HTML" icon="html" description="Estructura Web" />
   </div>
 </div>
 

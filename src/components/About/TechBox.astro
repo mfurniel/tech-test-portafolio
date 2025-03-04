@@ -1,7 +1,11 @@
 ---
-const { name } = Astro.props;
+const { name, icon, description } = Astro.props;
 ---
 
-<div class="px-6 py-4 text-center text-2xl text-blue-900">
-  <span class="font-semibold">{name}</span>
+<div class="flex gap-2 text-left">
+  <img src={`/icons/${icon}.svg`} alt={`${name} icon`} class="h-14" />
+  <div>
+    <h1 class="text-xl font-semibold text-blue-900">{name}</h1>
+    <p class="font-ligth text-sm">{description}</p>
+  </div>
 </div>
