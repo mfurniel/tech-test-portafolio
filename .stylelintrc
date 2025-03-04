@@ -2,10 +2,12 @@
     "extends": [
       "stylelint-config-standard",
       "stylelint-config-recommended-vue",
-      "stylelint-config-html/astro"
+      "stylelint-config-html/astro",
+      "stylelint-prettier/recommended"
     ],
     "customSyntax": "postcss-html",
     "rules": {
+      "prettier/prettier": true,
       "at-rule-no-unknown": [
         true,
         {
