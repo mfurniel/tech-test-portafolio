@@ -1,0 +1,89 @@
+---
+import { Image } from "astro:assets";
+import profileImage from "../../../public/images/profileAbout.jpg";
+import TechBox from "./TechBox.astro";
+---
+
+<div
+  class="flex min-h-screen w-screen flex-col items-center justify-center p-8"
+>
+  <div class="max-w-6xl">
+    <h1 class="mb-10 text-left text-4xl font-bold text-blue-900">Sobre mí</h1>
+    <div
+      class="flex flex-col items-center justify-center gap-6 lg:flex-row lg:items-start"
+    >
+      <Image
+        src={profileImage}
+        alt="Descripción de la imagen"
+        class="m-2 h-58 w-58 rounded-full border-2 border-blue-900 object-cover"
+      />
+      <div
+        class="info-box relative max-w-4xl rounded-lg bg-white p-8 text-xl shadow-lg"
+      >
+        <p class="mb-4 text-justify text-gray-700">
+          ¡Hola! Soy Mauricio, Ingeniero Civil Informático titulado de la
+          Universidad de Concepción, estoy enfocado en el desarrollo de
+          software. Mi camino ha sido increíble, y mi objetivo es seguir
+          creciendo como profesional y mejorar constantemente.
+        </p>
+        <p class="mb-4 text-justify text-gray-700">
+          Actualmente, me estoy enfocando en ampliar mi portafolio, creando
+          proyectos interesantes que me permitan seguir aprendiendo. Mi
+          experiencia laboral me ha enseñado no solo aspectos técnicos, sino
+          también la importancia de comunicarme efectivamente, resolver
+          problemas y ser parte de un equipo.
+        </p>
+        <div class="mt-6">
+          <h2 class="mb-2">
+            Algunas tecnologías con las que he estado trabajando recientemente:
+          </h2>
+          <div class="flex space-x-16">
+            <ul class="mt-2 list-disc pl-5 text-gray-700">
+              <li>React</li>
+              <li>Vue</li>
+              <li>TypeScript</li>
+            </ul>
+            <ul class="mt-2 list-disc pl-5 text-gray-700">
+              <li>Ruby and Rails</li>
+              <li>Flutter</li>
+              <li>Tailwind</li>
+            </ul>
+          </div>
+        </div>
+        <a
+          href="https://drive.google.com/file/d/1NsNn5XnQY9C3z0oJMXnSmip897n0QXmm/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-md mt-6 inline-block transform rounded-full bg-orange-500 px-6 py-3 font-semibold text-white transition-transform duration-300 hover:scale-105 hover:bg-yellow-400"
+        >
+          Descarga mi CV
+        </a>
+      </div>
+    </div>
+    <div class="mt-6 flex flex-wrap justify-center gap-6 text-xl">
+      <TechBox name="Git" />
+      <TechBox name="GitHub" />
+      <TechBox name="Flutter" />
+      <TechBox name="React" />
+      <TechBox name="Vue" />
+      <TechBox name="JavaScript" />
+      <TechBox name="TypeScript" />
+      <TechBox name="Ruby on Rails" />
+      <TechBox name="PostgreSQL" />
+      <TechBox name="Python" />
+      <TechBox name="CSS" />
+    </div>
+  </div>
+</div>
+
+<style>
+  .info-box::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    transform: rotate(-90deg);
+    border-width: 25px;
+    border-style: solid;
+    border-color: transparent transparent white;
+  }
+</style>
