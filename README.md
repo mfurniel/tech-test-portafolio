@@ -66,3 +66,15 @@ npm run lint
 ```bash
 npm run lint:fix
 ```
+
+- **Check for style linting issues:**
+
+```bash
+npm run lint:css
+```
+
+- **Automatically style fix issues:**
+
+```bash
+npm run lint:css:fix
+```
