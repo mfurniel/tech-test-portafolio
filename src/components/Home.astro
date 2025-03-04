@@ -5,17 +5,17 @@ import profileImage from "../../public/images/profile.jpg";
 
 <div
   id="container"
-  class="flex flex-col h-screen w-screen items-center justify-center gap-2 bg-[url('/pattern.png')] bg-cover"
+  class="flex h-screen w-screen flex-col items-center justify-center gap-2 bg-[url('/pattern.png')] bg-cover"
 >
   <Image
     src={profileImage}
     alt="Descripción de la imagen"
-    class="w-40 h-40 object-cover m-2 border-2 border-blue-900 rounded-full"
+    class="m-2 h-40 w-40 rounded-full border-2 border-blue-900 object-cover"
   />
   <h1 class="text-3xl font-bold text-blue-900">Mauricio Furniel Campos</h1>
   <h2 class="text-xl font-semibold">Ingeniero Civil Informático</h2>
   <p class="text-s font-bold text-gray-500">Universidad de Concepción</p>
-  <div class="flex space-x-6 mt-2">
+  <div class="mt-2 flex space-x-6">
     <a
       href="https://github.com/mfurniel"
       target="_blank"
@@ -24,7 +24,7 @@ import profileImage from "../../public/images/profile.jpg";
       <img
         src="/icons/github.svg"
         alt="GitHub"
-        class="w-8 h-8 transition-all duration-500 hover:invert hover:brightness-150 hover:saturate-150"
+        class="h-8 w-8 transition-all duration-500 hover:brightness-150 hover:invert hover:saturate-150"
       />
     </a>
     <a
@@ -35,7 +35,7 @@ import profileImage from "../../public/images/profile.jpg";
       <img
         src="/icons/linkedin.svg"
         alt="LinkedIn"
-        class="w-8 h-8 transition-all duration-500 hover:invert hover:brightness-150 hover:saturate-150"
+        class="h-8 w-8 transition-all duration-500 hover:brightness-150 hover:invert hover:saturate-150"
       />
     </a>
   </div>
