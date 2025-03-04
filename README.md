@@ -47,10 +47,22 @@ All commands are run from the root of the project, from a terminal:
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
 
-## Comandos de Prettier:
+## Commands to run Prettier and ESLint:
 
-* **Formatear todos los archivos en el proyecto:**
+- **Format all files in the project:**
 
 ```bash
-npx prettier . --write
+npm run format
+```
+
+- **Check for linting issues:**
+
+```bash
+npm run lint
+```
+
+- **Automatically fix issues:**
+
+```bash
+npm run lint:fix
 ```
