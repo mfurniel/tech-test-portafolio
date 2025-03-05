@@ -14,9 +14,9 @@ import Sidebar from "../components/Sidebar/SideBar.vue";
   </head>
   <body class="bg-[#f9f7fd]">
     <div>
-      <Sidebar />
+      <Sidebar client:load />
     </div>
-    <main class="ml-28 p-8">
+    <main class="p-8 lg:ml-28">
       <slot />
     </main>
   </body>
