@@ -12,7 +12,7 @@
       class="fixed top-0 left-0 w-28 h-screen text-black border border-gray-200 p-4 flex flex-col justify-between items-center bg-white transform transition-transform duration-300 ease-in-out lg:translate-x-0"
       :class="{ '-translate-x-full': !isSidebarOpen }"
     >
-      <a href="/">
+      <a href="#home" @click.prevent="smoothScroll('#home')">
         <img src="icons/logo.svg" alt="profile" class="w-8 h-8 m-8" />
       </a>
 
