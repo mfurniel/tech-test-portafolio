@@ -12,32 +12,15 @@
       class="fixed top-0 left-0 w-28 h-screen text-black border border-gray-200 p-4 flex flex-col justify-between items-center bg-white transform transition-transform duration-300 ease-in-out lg:translate-x-0"
       :class="{ '-translate-x-full': !isSidebarOpen }"
     >
-      <a href="#home" @click.prevent="smoothScroll('#home')">
-        <img src="icons/logo.svg" alt="profile" class="w-8 h-8 m-8" />
-      </a>
+
+      <SmoothScrollLink target="#home" icon="icons/logo.svg" alt="Inicio" class="w-8 h-8 m-8 list-none"/>
 
       <nav>
         <ul class="flex flex-col items-center gap-10">
-          <li>
-            <a href="#home" @click.prevent="smoothScroll('#home')">
-              <img src="icons/home.svg" alt="Inicio" class="w-8 h-8" />
-            </a>
-          </li>
-          <li>
-            <a href="#about" @click.prevent="smoothScroll('#about')">
-              <img src="icons/profile.svg" alt="Sobre Mí" class="w-8 h-8" />
-            </a>
-          </li>
-          <li>
-            <a href="#education" @click.prevent="smoothScroll('#education')">
-              <img src="icons/education.svg" alt="Educación" class="w-8 h-8" />
-            </a>
-          </li>
-          <li>
-            <a href="#projects" @click.prevent="smoothScroll('#projects')">
-              <img src="icons/stack.svg" alt="Proyectos" class="w-8 h-8" />
-            </a>
-          </li>
+          <SmoothScrollLink target="#home" icon="icons/home.svg" alt="Inicio" />
+          <SmoothScrollLink target="#about" icon="icons/profile.svg" alt="Sobre Mí" />
+          <SmoothScrollLink target="#education" icon="icons/education.svg" alt="Educación" />
+          <SmoothScrollLink target="#projects" icon="icons/stack.svg" alt="Proyectos" />
         </ul>
       </nav>
 
@@ -47,8 +30,12 @@
 </template>
 
 <script>
+import SmoothScrollLink from './SmoothScrollLink.vue';
 export default {
   name: 'CustomSideBar',
+  components: {
+    SmoothScrollLink,
+  },
   data() {
     return {
       isSidebarOpen: false,
@@ -62,8 +49,8 @@ export default {
       const element = document.querySelector(target);
       if (element) {
         element.scrollIntoView({
-          behavior: 'smooth', 
-          block: 'start', 
+          behavior: 'smooth',
+          block: 'start',
         });
       }
     },

@@ -1,0 +1,40 @@
+<template>
+  <li>
+    <a :href="target" @click.prevent="smoothScroll">
+      <img :src="icon" :alt="alt" class="w-8 h-8" />
+    </a>
+  </li>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  name: 'SmoothScrollLink',
+  props: {
+    target: {
+      type: String,
+      required: true,
+    },
+    icon: {
+      type: String,
+      required: true,
+    },
+    alt: {
+      type: String,
+      required: true,
+    },
+  },
+  methods: {
+    smoothScroll() {
+      const element = document.querySelector(this.target);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }
+    },
+  },
+});
+</script>
