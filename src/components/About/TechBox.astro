@@ -1,13 +1,21 @@
 ---
+import { Image } from "astro:assets";
+
+export interface Props {
+  name: string;
+  icon: ImageMetadata;
+  description: string;
+}
+
 const { name, icon, description } = Astro.props;
 ---
 
 <div
-  class="flex gap-2 text-left transition-all duration-300 hover:scale-105 hover:shadow-lg"
+  class="grid grid-cols-[auto_1fr] grid-rows-1 gap-2 text-left transition-all duration-300 hover:scale-105 hover:shadow-lg"
 >
-  <img src={`/icons/${icon}.svg`} alt={`${name} icon`} class="h-14 p-2" />
-  <div>
+  <Image src={icon} alt={`${name} icon`} class="h-16 w-16 p-2" />
+  <div class="">
     <h1 class="text-xl font-semibold text-blue-900">{name}</h1>
-    <p class="font-ligth text-sm">{description}</p>
+    <p class="text-sm font-light">{description}</p>
   </div>
 </div>

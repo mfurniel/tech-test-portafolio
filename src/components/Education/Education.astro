@@ -1,5 +1,7 @@
 ---
 import EducationCard from "./EducationCard.astro";
+import salesianoIcon from "../../../public/icons/salesiano.png";
+import udecIcon from "../../../public/icons/udec.png";
 ---
 
 <div id="education" class="align-center flex w-full justify-center p-16">
@@ -9,14 +11,14 @@ import EducationCard from "./EducationCard.astro";
     </h1>
     <div class="grid grid-cols-1 gap-6 text-white lg:grid-cols-2">
       <EducationCard
-        imageSrc="/icons/salesiano.png"
+        imageSrc={salesianoIcon}
         altText="Salesiano Icon"
         title="Liceo Salesiano Domingo Savio"
         description="Mi formación de educación media la realicé en el Liceo Salesiano Domingo Savio, Concepción, Chile."
         bgColor="bg-blue-950"
       />
       <EducationCard
-        imageSrc="/icons/udec.png"
+        imageSrc={udecIcon}
         altText="Universidad de Concepción Icon"
         title="Universidad de Concepción"
         description="Soy Ingeniero Civil Informático, titulado en 2024 de la Universidad de Concepción, ubicada en Concepción, Chile, correspondiente a la generación de 2018."

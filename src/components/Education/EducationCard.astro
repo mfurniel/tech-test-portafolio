@@ -1,11 +1,21 @@
 ---
-const { imageSrc, altText, title, description, bgColor } = Astro.props;
+import { Image } from "astro:assets";
+
+export interface Props {
+  imageSrc: ImageMetadata;
+  altText: string;
+  title: string;
+  description: string;
+  bgColor: string;
+}
+
+const { imageSrc, altText, title, description, bgColor } = Astro.props as Props;
 ---
 
 <div
   class={`flex flex-col items-center justify-start p-10 rounded-2xl gap-4 ${bgColor} text-center transform transition-all duration-300 hover:scale-105 hover:translate-y-[-5px]`}
 >
-  <img src={imageSrc} alt={altText} class="h-26 sm:h-28" />
+  <Image src={imageSrc} alt={altText} class="h-26 object-contain sm:h-28" />
   <h2 class="text-2xl font-bold">
     {title}
   </h2>
