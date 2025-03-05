@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Sidebar from "../components/Sidebar/SideBar.vue";
 ---
 
 <!doctype html>
@@ -11,8 +12,13 @@ import "../styles/global.css";
     <meta name="generator" content={Astro.generator} />
     <title>Tech Test Portafolio</title>
   </head>
-  <body class="bg-gray-100">
-    <slot />
+  <body class="bg-[#f9f7fd]">
+    <div>
+      <Sidebar />
+    </div>
+    <main class="ml-28 p-8">
+      <slot />
+    </main>
   </body>
 </html>
 
