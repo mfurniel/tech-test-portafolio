@@ -1,0 +1,29 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  image: string;
+  bgColor?: string;
+  overlayColor?: string;
+}
+
+const {
+  title,
+  description,
+  image,
+  bgColor = "bg-gray-400",
+  overlayColor = "bg-gray-400",
+} = Astro.props;
+---
+
+<div
+  class={`relative group w-[350px] h-[350px] rounded-3xl overflow-hidden flex items-center justify-center ${bgColor}`}
+>
+  <img src={image} alt={title} class="h-full w-full object-contain" />
+  <div
+    class={`absolute inset-0 flex flex-col items-center justify-center text-center p-4 ${overlayColor} bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+  >
+    <h1 class="text-lg font-bold text-white">{title}</h1>
+    <p class="text-sm text-white">{description}</p>
+  </div>
+</div>
