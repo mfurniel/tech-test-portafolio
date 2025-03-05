@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import SideBar from "../components/Sidebar/Sidebar.vue";
+import CustomSideBar from "../components/CustomSideBar/CustomSideBar.vue";
 ---
 
 <!doctype html>
@@ -12,9 +12,9 @@ import SideBar from "../components/Sidebar/Sidebar.vue";
     <meta name="generator" content={Astro.generator} />
     <title>Tech Test Portafolio</title>
   </head>
-  <body class="bg-[#f9f7fd]">
+  <body class="bg-bgOficial">
     <div>
-      <SideBar client:load />
+      <CustomSideBar client:load />
     </div>
     <main class="p-8 lg:ml-28">
       <slot />
