@@ -2,8 +2,10 @@
 const { name, icon, description } = Astro.props;
 ---
 
-<div class="flex gap-2 text-left">
-  <img src={`/icons/${icon}.svg`} alt={`${name} icon`} class="h-14" />
+<div
+  class="flex gap-2 text-left transition-all duration-300 hover:scale-105 hover:shadow-lg"
+>
+  <img src={`/icons/${icon}.svg`} alt={`${name} icon`} class="h-14 p-2" />
   <div>
     <h1 class="text-xl font-semibold text-blue-900">{name}</h1>
     <p class="font-ligth text-sm">{description}</p>
