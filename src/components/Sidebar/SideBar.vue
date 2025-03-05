@@ -2,7 +2,7 @@
   <div>
     <button
       @click="toggleSidebar"
-      class="fixed top-4 z-50 p-2  border border-gray-400 lg:hidden transition-all duration-300 ease-in-out"
+      class="fixed top-4 z-50 p-2 border border-gray-400 lg:hidden transition-all duration-300 ease-in-out"
       :class="isSidebarOpen ? 'left-32' : 'left-4'"
     >
       <img src="icons/menu.svg" alt="Menú" class="w-4 h-4" />
@@ -19,22 +19,22 @@
       <nav>
         <ul class="flex flex-col items-center gap-10">
           <li>
-            <a href="/">
+            <a href="#home" @click.prevent="smoothScroll('#home')">
               <img src="icons/home.svg" alt="Inicio" class="w-8 h-8" />
             </a>
           </li>
           <li>
-            <a href="#about">
+            <a href="#about" @click.prevent="smoothScroll('#about')">
               <img src="icons/profile.svg" alt="Sobre Mí" class="w-8 h-8" />
             </a>
           </li>
           <li>
-            <a href="#education">
+            <a href="#education" @click.prevent="smoothScroll('#education')">
               <img src="icons/education.svg" alt="Educación" class="w-8 h-8" />
             </a>
           </li>
           <li>
-            <a href="#projects">
+            <a href="#projects" @click.prevent="smoothScroll('#projects')">
               <img src="icons/stack.svg" alt="Proyectos" class="w-8 h-8" />
             </a>
           </li>
@@ -58,6 +58,23 @@ export default {
     toggleSidebar() {
       this.isSidebarOpen = !this.isSidebarOpen;
     },
+    smoothScroll(target) {
+      const element = document.querySelector(target);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth', 
+          block: 'start', 
+        });
+      }
+    },
+  },
+  mounted() {
+    window.addEventListener('popstate', () => {
+      const hash = window.location.hash;
+      if (hash) {
+        this.smoothScroll(hash);
+      }
+    });
   },
 };
 </script>
