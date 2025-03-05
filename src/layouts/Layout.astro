@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import Sidebar from "../components/Sidebar/SideBar.vue";
+import SideBar from "../components/Sidebar/Sidebar.vue";
 ---
 
 <!doctype html>
@@ -14,7 +14,7 @@ import Sidebar from "../components/Sidebar/SideBar.vue";
   </head>
   <body class="bg-[#f9f7fd]">
     <div>
-      <Sidebar client:load />
+      <SideBar client:load />
     </div>
     <main class="p-8 lg:ml-28">
       <slot />
