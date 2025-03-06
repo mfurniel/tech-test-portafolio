@@ -42,7 +42,7 @@
             <p class="text-md md:text-xl text-gray-600">
               {{ jobs[selectedJobIndex].duration }}
             </p>
-            <ul class="mt-2 list-inside list-disc">
+            <ul class="list-inside list-disc">
               <li
                 v-for="(responsibility, i) in jobs[selectedJobIndex]
                   .responsibilities"
@@ -93,7 +93,7 @@ export default defineComponent({
           duration: "Abril 2024 - Junio 2024",
           responsibilities: [
             "Desarrollo de nuevas funcionalidades para la plataforma web de diseño y gestión de formularios.",
-            "Colaboré en un equipo Scrum, participando de las distintas ceremonias y reuniones.",
+            "Colaboración dentro del marco de trabajo Scrum, participando activamente en las ceremonias y reuniones correspondientes.",
           ],
           tecnologies: ["Vue", "Tailwind CSS", "Git", "Github", "Node"],
         },
@@ -102,10 +102,10 @@ export default defineComponent({
           position: "Desarrollador Mobile Practicante @ AVA Montajes",
           duration: "Enero 2023 - Marzo 2023",
           responsibilities: [
-            "Aplicación móvil para formularios y visualización de documentos en entornos sin conectividad.",
-            "Implementé sincronización de datos.",
-            "Diseño la base de datos.",
-            "Desarollo de widgets personalizados para mejorar la experiencia del usuario.",
+            "Aplicación móvil para la gestión de formularios y visualización de documentos en entornos sin conectividad.",
+            "Implementación de sincronización de datos.",
+            "Diseño de la base de datos.",
+            "Desarrollo de widgets personalizados para mejorar la experiencia del usuario.",
           ],
           tecnologies: ["Flutter", "Git", "Bitbucket", "Sqflite"],
         },
