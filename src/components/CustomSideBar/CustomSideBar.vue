@@ -29,7 +29,8 @@
         </ul>
       </nav>
 
-      <img src="icons/moon.svg" alt="Modo Oscuro" class="w-8 h-8 mb-6" />
+      <img src="icons/moon.svg" alt="Modo Oscuro" class="w-8 h-8 mb-6 invisible" />
+      
     </aside>
   </div>
 </template>
