@@ -78,3 +78,51 @@ npm run lint:css
 ```bash
 npm run lint:css:fix
 ```
+
+## Commitlint
+
+This project uses **Commitlint** to enforce conventional commit messages.
+
+### Configuration
+Commitlint is configured with [`@commitlint/config-conventional`](https://github.com/conventional-changelog/commitlint/tree/master/@commitlint/config-conventional), ensuring standardized commit messages.
+
+### Commit Message Structure
+A commit message follows this structure:
+
+```
+<type>(optional scope): <description>
+
+[optional body]
+
+[optional footer]
+```
+
+### Commit Types
+- **feat**: A new feature  
+- **fix**: A bug fix  
+- **docs**: Documentation changes  
+- **style**: Code style (formatting, missing semicolons, etc.)  
+- **refactor**: Code changes without fixing bugs or adding features  
+- **perf**: Performance improvements  
+- **test**: Adding or updating tests  
+- **build**: Changes affecting the build system or dependencies  
+- **ci**: Continuous integration configuration changes  
+- **chore**: Maintenance tasks (build, CI, dependencies)  
+- **revert**: Reverting a previous commit  
+
+### Commit Example with Body and Footer
+
+```bash
+git commit -m "docs: improve commit message guidelines in README" \
+-m "Expanded the commit message section with more details on optional body and footer usage. Also added examples for better clarity." \
+-m "Related to issue #42"
+```
+
+For more details, see [Conventional Commits](https://www.conventionalcommits.org/).
+
+
+
+
+
+
+
