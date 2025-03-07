@@ -1,12 +1,6 @@
 <template>
   <div>
-    <button
-      @click="toggleSidebar"
-      class="fixed top-4 z-50 p-2 border border-gray-400 bg-white lg:hidden transition-all duration-300 ease-in-out"
-      :class="isSidebarOpen ? 'left-32' : 'left-4'"
-    >
-      <img src="icons/menu.svg" alt="Menú" class="w-4 h-4" />
-    </button>
+    <ToggleButton :isOpen="isSidebarOpen" @toggleAction="toggleSidebar" />
 
     <aside
       class="fixed top-0 left-0 w-28 h-screen text-black border border-gray-200 p-4 flex flex-col justify-between items-center bg-white transform transition-transform duration-300 ease-in-out lg:translate-x-0"
@@ -38,11 +32,13 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import SmoothScrollLink from './SmoothScrollLink.vue';
+import ToggleButton from './ToggleButton.vue';
 
 export default defineComponent({
   name: 'CustomSideBar',
   components: {
     SmoothScrollLink,
+    ToggleButton,
   },
   data() {
     return {
@@ -53,31 +49,6 @@ export default defineComponent({
     toggleSidebar(): void {
       this.isSidebarOpen = !this.isSidebarOpen;
     },
-    smoothScroll(target: string): void {
-      const element = document.querySelector(target);
-      if (element) {
-        element.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-        });
-      }
-    },
-  },
-  mounted(): void {
-    window.addEventListener('popstate', () => {
-      const hash = window.location.hash;
-      if (hash) {
-        this.smoothScroll(hash);
-      }
-    });
   },
 });
 </script>
-
-<style scoped>
-@media (max-width: 1023px) {
-  aside {
-    z-index: 40;
-  }
-}
-</style>
