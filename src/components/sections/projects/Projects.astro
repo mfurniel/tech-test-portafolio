@@ -4,49 +4,47 @@ import glanzProject from "../../../../public/images/glanzProject.png";
 import portfolioProject from "../../../../public/images/portfolioReactProject.png";
 import dashboardProject from "../../../../public/images/dashboardProject.png";
 import techTestPortafolio from "../../../../public/images/techTestPortafolio.png";
+import SectionContainer from "../../ui/SectionContainer.astro";
 ---
 
-<div id="projects" class="align-center flex w-full justify-center p-16">
-  <div class="w-6xl max-w-6xl">
-    <h1 class="mb-10 text-left text-4xl font-bold text-blue-900">Proyectos</h1>
-    <div
-      class="grid grid-cols-1 place-items-center gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3"
-    >
-      <ProjectCard
-        title="Glanz Optical Calculator Transposition"
-        description="Glanz es una aplicación móvil creada para realizar el cálculo de la transposición óptica de recetas de lentes. Actualmente está disponible en la Play Store."
-        image={glanzProject}
-        bgColor="bg-[#674d8a]"
-        overlayColor="bg-blue-900/80"
-        projectLink="https://play.google.com/store/apps/details?id=com.grauss.glanz"
-        techs={["Flutter", "Dart"]}
-      />
-      <ProjectCard
-        title="Personal Portfolio Website"
-        description="Un portafolio personal creado para mostrar proyectos y habilidades como desarrollador web, utilizando tecnologías modernas."
-        image={portfolioProject}
-        bgColor="bg-gray-200"
-        overlayColor="bg-blue-900/80"
-        projectLink="https://mfurniel.github.io/mfurnielc_portafolio/"
-        techs={["React", "Tailwind", "JavaScript"]}
-      />
-      <ProjectCard
-        title="Dashboard de Adherencia"
-        description="Dashboard creado para mostrar la adherencia de los pacientes a sus tratamientos médicos."
-        image={dashboardProject}
-        bgColor="bg-gray-200"
-        overlayColor="bg-blue-900/80"
-        techs={["React", "Tailwind", "JavaScript"]}
-      />
-      <ProjectCard
-        title="Portofolio de Prueba Técnica"
-        description="Un portafolio personal creado como parte de una prueba técnica. ¡Estás trabajando en este proyecto ahora mismo!"
-        image={techTestPortafolio}
-        bgColor="bg-gray-200"
-        overlayColor="bg-blue-900/80"
-        techs={["Astro", "Vue", "Tailwind"]}
-        githubLink="https://github.com/mfurniel/tech-test-portafolio"
-      />
-    </div>
+<SectionContainer title="Proyectos" idSection="projects">
+  <div
+    class="grid grid-cols-1 place-items-center gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3"
+  >
+    <ProjectCard
+      title="Glanz Optical Calculator Transposition"
+      description="Glanz es una aplicación móvil creada para realizar el cálculo de la transposición óptica de recetas de lentes. Actualmente está disponible en la Play Store."
+      image={glanzProject}
+      bgColor="bg-[#674d8a]"
+      overlayColor="bg-blue-900/80"
+      projectLink="https://play.google.com/store/apps/details?id=com.grauss.glanz"
+      techs={["Flutter", "Dart"]}
+    />
+    <ProjectCard
+      title="Personal Portfolio Website"
+      description="Un portafolio personal creado para mostrar proyectos y habilidades como desarrollador web, utilizando tecnologías modernas."
+      image={portfolioProject}
+      bgColor="bg-gray-200"
+      overlayColor="bg-blue-900/80"
+      projectLink="https://mfurniel.github.io/mfurnielc_portafolio/"
+      techs={["React", "Tailwind", "JavaScript"]}
+    />
+    <ProjectCard
+      title="Dashboard de Adherencia"
+      description="Dashboard creado para mostrar la adherencia de los pacientes a sus tratamientos médicos."
+      image={dashboardProject}
+      bgColor="bg-gray-200"
+      overlayColor="bg-blue-900/80"
+      techs={["React", "Tailwind", "JavaScript"]}
+    />
+    <ProjectCard
+      title="Portofolio de Prueba Técnica"
+      description="Un portafolio personal creado como parte de una prueba técnica. ¡Estás trabajando en este proyecto ahora mismo!"
+      image={techTestPortafolio}
+      bgColor="bg-gray-200"
+      overlayColor="bg-blue-900/80"
+      techs={["Astro", "Vue", "Tailwind"]}
+      githubLink="https://github.com/mfurniel/tech-test-portafolio"
+    />
   </div>
-</div>
+</SectionContainer>

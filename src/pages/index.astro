@@ -4,6 +4,7 @@ import Education from "../components/sections/education/Education.astro";
 import Experience from "../components/sections/experience/Experience.vue";
 import Home from "../components/sections/home/Home.astro";
 import Projects from "../components/sections/projects/Projects.astro";
+import SectionContainer from "../components/ui/SectionContainer.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -11,6 +12,8 @@ import Layout from "../layouts/Layout.astro";
   <Home />
   <AboutMe />
   <Education />
-  <Experience client:load />
+  <SectionContainer title="Experiencia" idSection="experience">
+    <Experience client:load />
+  </SectionContainer>
   <Projects />
 </Layout>

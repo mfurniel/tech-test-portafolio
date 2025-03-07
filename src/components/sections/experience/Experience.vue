@@ -1,13 +1,4 @@
-<template id="experience">
-  <div
-    id="experience"
-    class="align-center align-center flex h-2/3 w-full items-center justify-center p-16"
-  >
-    <div class="flex w-6xl max-w-6xl flex-col">
-      <h1 class="mb-10 text-left text-4xl font-bold text-blue-900">
-        Experiencia
-      </h1>
-
+<template>
       <div class="grid grid-cols-1 md:grid-cols-4">
         <div class="col-span-1 gap-4">
           <div
@@ -67,8 +58,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
 </template>
 
 <script lang="ts">
