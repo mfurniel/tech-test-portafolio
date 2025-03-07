@@ -9,15 +9,11 @@ import TechSkills from "./TechSkills.astro";
   <div
     class="flex flex-col items-center justify-center gap-6 lg:flex-row lg:items-start"
   >
-    <div
-      class="m-2 h-58 min-w-40 overflow-hidden rounded-full border-2 border-blue-900"
-    >
-      <Image
-        src={profileImage}
-        alt="Imagen de perfil"
-        class="h-full w-full object-cover"
-      />
-    </div>
+    <Image
+      src={profileImage}
+      alt="Imagen de Perfil"
+      class="m-2 h-58 w-58 rounded-full border-2 border-blue-900 object-cover"
+    />
     <div
       class="info-box text-md relative max-w-4xl rounded-lg bg-white p-8 text-justify shadow-lg lg:text-lg xl:text-xl"
     >
@@ -57,6 +53,7 @@ import TechSkills from "./TechSkills.astro";
           target="_blank"
           rel="noopener noreferrer"
           class="w-1/4 min-w-52 transform rounded-full bg-blue-900 px-6 py-3 text-center font-semibold text-white transition-transform duration-300 hover:scale-105 hover:bg-red-600"
+          aria-label="Descargar mi currículum vitae"
         >
           Descarga mi CV
         </a>
