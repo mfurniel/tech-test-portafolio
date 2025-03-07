@@ -6,6 +6,7 @@ import Home from "../components/sections/home/Home.astro";
 import Projects from "../components/sections/projects/Projects.astro";
 import SectionContainer from "../components/ui/SectionContainer.astro";
 import Layout from "../layouts/Layout.astro";
+import { experiences, experiencesAcademyc } from "../data/experiences";
 ---
 
 <Layout>
@@ -13,7 +14,10 @@ import Layout from "../layouts/Layout.astro";
   <AboutMe />
   <Education />
   <SectionContainer title="Experiencia" idSection="experience">
-    <Experience client:load />
+    <Experience client:load experiences={experiences} />
+  </SectionContainer>
+  <SectionContainer title="Actividades Académicas" idSection="activities">
+    <Experience client:load experiences={experiencesAcademyc} />
   </SectionContainer>
   <Projects />
 </Layout>
