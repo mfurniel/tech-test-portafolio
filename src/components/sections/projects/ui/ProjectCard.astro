@@ -58,12 +58,18 @@ const {
     <div class="mb-4 flex justify-end gap-4">
       {
         projectLink ? (
-          <a href={projectLink} target="_blank" rel="noopener noreferrer">
+          <a
+            href={projectLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visitar Repositorio"
+          >
             <Image
               src={linkIcon}
               alt="Link Icon"
               class="h-10 w-10 rounded-full bg-yellow-300 p-2"
             />
+            <span class="sr-only">Visitar Proyecto</span>
           </a>
         ) : (
           <div class="h-10" />
@@ -71,12 +77,18 @@ const {
       }
       {
         githubLink ? (
-          <a href={githubLink} target="_blank" rel="noopener noreferrer">
+          <a
+            href={githubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visitar Repositorio"
+          >
             <Image
               src={githubIImage}
               alt="GitHub Icon"
               class="h-10 w-10 rounded-full bg-yellow-300 p-2"
             />
+            <span class="sr-only">Visitar Repositorio</span>
           </a>
         ) : (
           <div class="h-10" />

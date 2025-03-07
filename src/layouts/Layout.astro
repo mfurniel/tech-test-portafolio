@@ -1,6 +1,8 @@
 ---
 import "../styles/global.css";
 import CustomSideBar from "../components/ui/CustomSideBar.vue";
+const pageDescription =
+  "Portafolio Web de un desarrollador de software junior utilizando tecnologias como Astro, Vue, Tailwind y Typescript.";
 ---
 
 <!doctype html>
@@ -11,6 +13,7 @@ import CustomSideBar from "../components/ui/CustomSideBar.vue";
     <link rel="icon" type="image/svg+xml" href="/icons/logo.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Tech Test Portafolio</title>
+    <meta name="description" content={pageDescription} />
   </head>
   <body class="bg-bgOficial">
     <div>
@@ -21,12 +24,3 @@ import CustomSideBar from "../components/ui/CustomSideBar.vue";
     </main>
   </body>
 </html>
-
-<!-- <style>
-  html,
-  body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-  }
-</style> -->

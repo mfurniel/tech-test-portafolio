@@ -1,19 +1,18 @@
 ---
 import { Image } from "astro:assets";
 import profileImage from "../../../../public/images/profile.webp";
-import SmoothScrollLink from "../../ui/SmoothScrollLink.vue";
+import SmoothScrollLink from "../../ui/SmoothScrollButton.vue";
 ---
 
 <div
   id="home"
   class="flex h-screen w-full flex-col items-center justify-center gap-2 bg-[url('/backgroundHome.svg')] bg-cover pb-32 text-center"
 >
-  <Image
-    src={profileImage}
-    alt="Imagen de perfil"
-    class="m-2 h-40 w-40 rounded-full border-2 border-blue-900 object-cover"
-    loading="eager"
-  />
+  <div
+    class="m-2 h-40 w-40 overflow-hidden rounded-full border-2 border-blue-900"
+  >
+    <Image src={profileImage} alt="Imagen de perfil" class="object-cover" />
+  </div>
   <h1 class="text-3xl font-bold text-blue-900">Mauricio Furniel Campos</h1>
   <h2 class="text-xl font-semibold">Ingeniero Civil Informático</h2>
   <p class="text-s font-bold text-gray-500">Universidad de Concepción</p>
@@ -22,23 +21,27 @@ import SmoothScrollLink from "../../ui/SmoothScrollLink.vue";
       href="https://github.com/mfurniel"
       target="_blank"
       rel="noopener noreferrer"
+      aria-label="Visitar perfil de Github"
     >
       <img
         src="/icons/github.svg"
         alt="GitHub"
         class="h-8 w-8 transition-all duration-500 hover:brightness-150 hover:invert hover:saturate-150"
       />
+      <span class="sr-only">Visitar perfil de Github</span>
     </a>
     <a
       href="https://www.linkedin.com/in/mauricio-furniel"
       target="_blank"
       rel="noopener noreferrer"
+      aria-label="Visitar perfil de LinkedIn"
     >
       <img
         src="/icons/linkedin.svg"
         alt="LinkedIn"
         class="h-8 w-8 transition-all duration-500 hover:brightness-150 hover:invert hover:saturate-150"
       />
+      <span class="sr-only">Visitar perfil de LinkedIn</span>
     </a>
   </div>
   <div class="absolute bottom-12 flex list-none flex-col items-center gap-1">

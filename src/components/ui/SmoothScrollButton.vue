@@ -1,14 +1,14 @@
 <template>
-    <a :href="target" @click.prevent="smoothScroll">
-      <img :src="icon" :alt="alt" class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
-    </a>
+  <button @click="smoothScroll" :aria-label="alt">
+    <img :src="icon" :alt="alt" class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
+  </button>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'SmoothScrollLink',
+  name: 'SmoothScrollButton',
   props: {
     target: {
       type: String,

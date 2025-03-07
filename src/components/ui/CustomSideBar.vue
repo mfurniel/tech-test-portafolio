@@ -14,7 +14,7 @@
       />
 
       <nav>
-        <ul class="flex flex-col items-center gap-10">
+        <ul class="flex flex-col items-center gap-6">
           <li><SmoothScrollLink target="#home" icon="icons/home.svg" alt="Inicio" /></li>
           <li><SmoothScrollLink target="#about" icon="icons/profile.svg" alt="Sobre Mí" /></li>
           <li><SmoothScrollLink target="#education" icon="icons/education.svg" alt="Educación" /></li>
@@ -32,7 +32,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import SmoothScrollLink from './SmoothScrollLink.vue';
+import SmoothScrollLink from './SmoothScrollButton.vue';
 import ToggleButton from './ToggleButton.vue';
 
 export default defineComponent({
