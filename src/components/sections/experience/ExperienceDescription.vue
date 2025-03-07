@@ -4,9 +4,9 @@
     class="col-span-3 min-h-100 rounded-tr-4xl rounded-br-4xl bg-white shadow-lg"
   >
     <div class="space-y-4 p-8">
-      <h3 class="text-xl md:text-2xl font-semibold text-blue-900">
+      <h1 class="text-xl md:text-2xl font-semibold text-blue-900">
         {{ experience.role }}
-      </h3>
+      </h1>
       <p class="text-md md:text-xl text-gray-600">
         {{ experience.duration }}
       </p>

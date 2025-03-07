@@ -15,12 +15,12 @@
 
       <nav>
         <ul class="flex flex-col items-center gap-10">
-          <SmoothScrollLink target="#home" icon="icons/home.svg" alt="Inicio" />
-          <SmoothScrollLink target="#about" icon="icons/profile.svg" alt="Sobre Mí" />
-          <SmoothScrollLink target="#education" icon="icons/education.svg" alt="Educación" />
-          <SmoothScrollLink target="#experience" icon="icons/portfolio.svg" alt="Experiencia" />
-          <SmoothScrollLink target="#activities" icon="icons/backpack.svg" alt="Actividades Académicas" />
-          <SmoothScrollLink target="#projects" icon="icons/stack.svg" alt="Proyectos" />
+          <li><SmoothScrollLink target="#home" icon="icons/home.svg" alt="Inicio" /></li>
+          <li><SmoothScrollLink target="#about" icon="icons/profile.svg" alt="Sobre Mí" /></li>
+          <li><SmoothScrollLink target="#education" icon="icons/education.svg" alt="Educación" /></li>
+          <li><SmoothScrollLink target="#experience" icon="icons/portfolio.svg" alt="Experiencia" /></li>
+          <li><SmoothScrollLink target="#activities" icon="icons/backpack.svg" alt="Actividades Académicas" /></li>
+          <li><SmoothScrollLink target="#projects" icon="icons/stack.svg" alt="Proyectos" /></li>
         </ul>
       </nav>
 
