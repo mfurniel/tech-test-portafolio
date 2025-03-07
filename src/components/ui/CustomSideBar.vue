@@ -19,6 +19,7 @@
           <SmoothScrollLink target="#about" icon="icons/profile.svg" alt="Sobre Mí" />
           <SmoothScrollLink target="#education" icon="icons/education.svg" alt="Educación" />
           <SmoothScrollLink target="#experience" icon="icons/portfolio.svg" alt="Experiencia" />
+          <SmoothScrollLink target="#activities" icon="icons/backpack.svg" alt="Actividades Académicas" />
           <SmoothScrollLink target="#projects" icon="icons/stack.svg" alt="Proyectos" />
         </ul>
       </nav>
