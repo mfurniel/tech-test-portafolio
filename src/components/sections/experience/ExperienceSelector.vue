@@ -10,9 +10,9 @@
     >
       <button
         @click="selectExperience(index)"
-        class="p-4 h-full w-full text-left text-xl font-semibold text-blue-900 hover:text-red-400 focus:outline-none"
+        class="p-4 h-full w-full text-left text-xl font-semibold text-blue-900 hover:text-red-600 focus:outline-none"
         :class="{
-          'text-red-400': selectedExperienceIndex === index,
+          'text-red-600': selectedExperienceIndex === index,
         }"
       >
         {{ experience.company }}

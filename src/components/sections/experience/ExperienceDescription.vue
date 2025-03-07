@@ -22,7 +22,7 @@
           <span
             v-for="(technology, i) in experience.technologies"
             :key="i"
-            class="text-red-400"
+            class="text-red-600"
           >
             {{ technology }}
             <span v-if="i < experience.responsibilities.length - 1">
