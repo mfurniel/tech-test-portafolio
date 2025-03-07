@@ -1,20 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import profileImage from "../../../../public/images/profileAbout.jpg";
-import TechBox from "./ui/TechBox.astro";
-import gitIcon from "../../../../public/icons/git.svg";
-import githubIcon from "../../../../public/icons/github.svg";
-import flutterIcon from "../../../../public/icons/flutter.svg";
-import reactIcon from "../../../../public/icons/react.svg";
-import vueIcon from "../../../../public/icons/vue.svg";
-import jsIcon from "../../../../public/icons/javascript.svg";
-import tsIcon from "../../../../public/icons/typescript.svg";
-import railsIcon from "../../../../public/icons/rails.svg";
-import postgresIcon from "../../../../public/icons/postgresql.svg";
-import pythonIcon from "../../../../public/icons/python.svg";
-import cssIcon from "../../../../public/icons/css.svg";
-import htmlIcon from "../../../../public/icons/html.svg";
 import SectionContainer from "../../ui/SectionContainer.astro";
+import TechSkills from "./TechSkills.astro";
 ---
 
 <SectionContainer title="Sobre mí" idSection="about">
@@ -71,39 +59,7 @@ import SectionContainer from "../../ui/SectionContainer.astro";
       </div>
     </div>
   </div>
-
-  <div
-    class="mt-8 mb-8 grid grid-cols-2 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6"
-  >
-    <TechBox name="Git" icon={gitIcon} description="Control de Versiones" />
-    <TechBox name="GitHub" icon={githubIcon} description="Repositorios" />
-    <TechBox
-      name="Flutter"
-      icon={flutterIcon}
-      description="Práctica Profesional"
-    />
-    <TechBox name="React" icon={reactIcon} description="Memoria de Título" />
-    <TechBox name="Vue" icon={vueIcon} description="Trabajando en Eskuad" />
-    <TechBox name="JavaScript" icon={jsIcon} description="Memoria de Título" />
-    <TechBox
-      name="TypeScript"
-      icon={tsIcon}
-      description="Aplicado a Proyectos Personales"
-    />
-    <TechBox
-      name="Ruby on Rails"
-      icon={railsIcon}
-      description="Proyecto Personal"
-    />
-    <TechBox
-      name="PostgreSQL"
-      icon={postgresIcon}
-      description="Base de datos Pyme"
-    />
-    <TechBox name="Python" icon={pythonIcon} description="Api Rest con Flask" />
-    <TechBox name="CSS" icon={cssIcon} description="Estilo y Diseño" />
-    <TechBox name="HTML" icon={htmlIcon} description="Estructura Web" />
-  </div>
+  <TechSkills />
 </SectionContainer>
 
 <style>
