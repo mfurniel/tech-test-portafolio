@@ -5,7 +5,7 @@
   >
     <div class="space-y-4 p-8">
       <h3 class="text-xl md:text-2xl font-semibold text-blue-900">
-        {{ experience.position }}
+        {{ experience.role }}
       </h3>
       <p class="text-md md:text-xl text-gray-600">
         {{ experience.duration }}
@@ -18,14 +18,14 @@
         >
           {{ responsibility }}
         </li>
-        <li class="text-lg md:text-xl text-blue-900">Tecnologías utilizadas:
+        <li v-if="experience.technologies" class="text-lg md:text-xl text-blue-900">Tecnologías utilizadas:
           <span
             v-for="(technology, i) in experience.technologies"
             :key="i"
             class="text-red-400"
           >
             {{ technology }}
-            <span v-if="i < experience.technologies.length - 1">
+            <span v-if="i < experience.responsibilities.length - 1">
               -
             </span>
           </span>
@@ -40,10 +40,10 @@ import { defineComponent, type PropType } from 'vue';
 
 interface Experience {
   company: string;
-  position: string;
-  duration: string;
+  role: string;
+  duration: string | null;
   responsibilities: string[];
-  technologies: string[];
+  technologies: string[] | null;
 }
 
 export default defineComponent({

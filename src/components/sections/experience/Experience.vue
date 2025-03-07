@@ -10,17 +10,16 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent,  type PropType } from 'vue';
 import ExperienceSelector from './ExperienceSelector.vue';
 import ExperienceDescription from './ExperienceDescription.vue';
-import { experiences } from '../../../data/experiences';
 
 interface Experience {
   company: string;
-  position: string;
-  duration: string;
+  role: string;
+  duration: string | null;
   responsibilities: string[];
-  technologies: string[];
+  technologies: string[] | null;
 }
 
 export default defineComponent({
@@ -29,9 +28,14 @@ export default defineComponent({
     ExperienceSelector,
     ExperienceDescription,
   },
+  props: {
+    experiences: {
+      type: Array as PropType<Experience[]>,
+      required: true,
+    },
+  },
   data() {
     return {
-      experiences,
       selectedExperienceIndex: 0 as number,
     };
   },

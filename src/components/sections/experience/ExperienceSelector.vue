@@ -26,10 +26,10 @@ import { defineComponent, type PropType } from 'vue';
 
 interface Experience {
   company: string;
-  position: string;
-  duration: string;
+  role: string;
+  duration: string | null;
   responsibilities: string[];
-  technologies: string[];
+  technologies: string[] | null;
 }
 
 export default defineComponent({
