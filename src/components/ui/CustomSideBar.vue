@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="fixed z-50">
     <ToggleButton :isOpen="isSidebarOpen" @toggleAction="toggleSidebar" />
 
     <aside
