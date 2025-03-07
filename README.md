@@ -1,36 +1,88 @@
-# Astro Starter Kit: Basics
+# Tech Test Portafolio
 
-```sh
-npm create astro@latest -- --template basics
+![Banner or Logo](public/images/techTestPortafolio.png)
+
+## Table of Contents
+1. [Requirements](#requirements)
+2. [Getting Started](#getting-started)
+3. [About the Project](#about-the-project)
+4. [Commands](#commands)
+5. [Linting and Code Quality](#linting-and-code-quality)
+6. [Commands to run Prettier and ESLint](#commands-to-run-prettier-and-eslint)
+7. [Commitlint](#commitlint)
+8. [Husky Setup](#husky-setup)
+9. [Testing with Playwright](#testing-with-playwright)
+
+
+## Requirements
+
+To run this project, ensure you have the following installed:
+
+- **Node.js** (Latest LTS recommended)
+- **npm** (Latest version recommended)
+- **Astro** `^5.4.1`
+- **Vue.js** `^3.5.13`
+- **Tailwind CSS** `^4.0.9`
+- **TypeScript** (Included in Astro by default)
+
+## Getting Started
+
+To set up the project locally, follow these steps:
+
+```bash
+git clone github.com/mfurniel/tech-test-portafolio.git
+cd  tech-test-portafolio
+npm install
+npm run dev
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## About the Project
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+This project is a technical test that consists of developing a single-page landing page using the following technologies:
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+- **Astro.js v5**
+- **Tailwind CSS v4**
+- **Vue.js v3.5**
+- **TypeScript**
 
-## 🚀 Project Structure
+### Landing Page Sections
 
-Inside of your Astro project, you'll see the following folders and files:
+The landing page must include:
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- **About Me** – A brief introduction about yourself.
+- **Projects**– Showcasing the projects you have worked on.
+- **Technologies** – Listing the technologies you have used.
+- **Education** – Your academic background.
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+### Delivery Requirements
 
-## 🧞 Commands
+- **Source Code**: The project must be uploaded to a public GitHub repository.
+- **Hosting**: The landing page must be deployed on Vercel (using the free tier).
+
+### Technical Requirements
+
+- The site must be responsive and optimized for performance and best practices.
+- Implement Server-Side Rendering (SSR) with Astro.js.
+- Include at least one interactive component built with Vue.js.
+
+### Submission
+
+- GitHub Repository URL
+- Vercel Deployment URL
+
+### Evaluation Criteria
+
+The project will be evaluated based on the following aspects:
+
+- **Responsiveness** – Proper adaptation to different screen sizes.
+- **Google Lighthouse Score** – Performance, accessibility, best practices, and SEO.
+- **Code Quality** – Clear structure, readability, modularity, and efficient use of technologies.
+
+### Deadline
+
+The final submission **deadline is March 9, 2025, at 23:59 hrs**.
+
+## Commands
 
 All commands are run from the root of the project, from a terminal:
 
@@ -42,42 +94,33 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
+| `npm run lint`            | Run ESLint on `.js`, `.ts`, and `.astro` files   |
+| `npm run lint:fix`        | Fix ESLint issues automatically                  |
+| `npm run lint:css`        | Run Stylelint on `css`, `scss`, `vue`, and `astro` files |
+| `npm run lint:css:fix`    | Fix Stylelint issues automatically               |
+| `npm run format`          | Format files using Prettier                      |
+| `npm run prepare`         | Initialize Husky for git hooks                   |
+| `npm run test:e2e`        | Run end-to-end tests with Playwright             |
 
-## 👀 Want to learn more?
+## Linting and Code Quality
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+This project uses the following tools:
 
-## Commands to run Prettier and ESLint:
+- **ESLint**: Linting for JavaScript, TypeScript, and Astro files
+- **Stylelint**: Linting for CSS, SCSS, Vue, and Astro files
+- **Prettier**: Code formatting
+- **Husky**: Pre-commit hooks for enforcing code quality
+- **Commitlint¨**: Enforce conventional commit messages
 
-- **Format all files in the project:**
+## Commands to run Prettier and ESLint
 
-```bash
-npm run format
-```
-
-- **Check for linting issues:**
-
-```bash
-npm run lint
-```
-
-- **Automatically fix issues:**
-
-```bash
-npm run lint:fix
-```
-
-- **Check for style linting issues:**
-
-```bash
-npm run lint:css
-```
-
-- **Automatically style fix issues:**
-
-```bash
-npm run lint:css:fix
-```
+| Command                 | Action                                          |
+| :---------------------- | :---------------------------------------------- |
+| `npm run format`        | Format all files in the project                 |
+| `npm run lint`          | Check for linting issues                        |
+| `npm run lint:fix`      | Automatically fix linting issues                |
+| `npm run lint:css`      | Check for style linting issues                  |
+| `npm run lint:css:fix`  | Automatically fix style linting issues          |
 
 ## Commitlint
 
@@ -97,62 +140,96 @@ A commit message follows this structure:
 [optional footer]
 ```
 
-### Commit Types
-- **feat**: A new feature  
-- **fix**: A bug fix  
-- **docs**: Documentation changes  
-- **style**: Code style (formatting, missing semicolons, etc.)  
-- **refactor**: Code changes without fixing bugs or adding features  
-- **perf**: Performance improvements  
-- **test**: Adding or updating tests  
-- **build**: Changes affecting the build system or dependencies  
-- **ci**: Continuous integration configuration changes  
-- **chore**: Maintenance tasks (build, CI, dependencies)  
-- **revert**: Reverting a previous commit  
+#### Commit Types
 
-### Commit Example with Body and Footer
+| Type      | Description                                                   |
+| :-------- | :------------------------------------------------------------ |
+| **feat**  | A new feature                                                 |
+| **fix**   | A bug fix                                                     |
+| **docs**  | Documentation changes                                         |
+| **style** | Code style (formatting, missing semicolons, etc.)             |
+| **refactor** | Code changes without fixing bugs or adding features        |
+| **perf**  | Performance improvements                                      |
+| **test**  | Adding or updating tests                                      |
+| **build** | Changes affecting the build system or dependencies            |
+| **ci**    | Continuous integration configuration changes                  |
+| **chore** | Maintenance tasks (build, CI, dependencies)                   |
+| **revert** | Reverting a previous commit                                  |
+
+#### Commit Example with Body and Footer
 
 ```bash
-git commit -m "docs: improve commit message guidelines in README" \
+git commit -m "docs(core): improve commit message guidelines in README" \
 -m "Expanded the commit message section with more details on optional body and footer usage. Also added examples for better clarity." \
 -m "Related to issue #42"
 ```
 
-For more details, see [Conventional Commits](https://www.conventionalcommits.org/).
+## Husky Setup
 
-# Playwright Setup
+In this project, we use **Husky** to set up **Git hooks** for pre-commit and pre-push actions. These hooks ensure code quality by running linting, tests, and build processes before committing and pushing changes.
 
-Inside that directory, you can run several commands:
+### Pre-commit Hook
 
-  `npx playwright test`  
-    Runs the end-to-end tests.
+The pre-commit hook is configured to run the following commands before each commit:
 
-  `npx playwright test --ui`  
-    Starts the interactive UI mode.
+| Command | Description |
+| ------- | ----------- |
+| `npm run lint` | Runs JavaScript/TypeScript linting to ensure code style and quality. |
+| `npm run lint:css` | Runs CSS linting to check for issues with styles. |
+| `npm run test:e2e` | Runs end-to-end tests with Playwright. These tests are executed locally because we don't have a pipeline set up on the server. |
 
-  `npx playwright test --project=chromium`  
-    Runs the tests only on Desktop Chrome.
+These checks help maintain the integrity of the codebase and prevent bad code from being committed.
 
-  `npx playwright test example`  
-    Runs the tests in a specific file.
+### Pre-push Hook
 
-  `npx playwright test --debug`  
-    Runs the tests in debug mode.
+The pre-push hook ensures that the build process runs before pushing any changes:
 
-  `npx playwright codegen`  
-    Auto generate tests with Codegen.
+| Command | Description |
+| ------- | ----------- |
+| `npm run build` | Builds the project to ensure everything compiles correctly before pushing. |
 
-We suggest that you begin by typing:
+### Commitlint
 
-  `npx playwright test`
+We also use **commitlint** to enforce proper commit message formatting. This is set up through Husky and ensures that all commit messages follow the conventional commit format.
 
-And check out the following files:
-  - `./tests/example.spec.ts` - Example end-to-end test
-  - `./tests-examples/demo-todo-app.spec.ts` - Demo Todo App end-to-end tests
-  - `./playwright.config.ts` - Playwright Test configuration
+For more details about commit message formatting, check the **commitlint** configuration in the project.
 
-Visit [https://playwright.dev/docs/intro](https://playwright.dev/docs/intro) for more information. ✨
+This setup helps maintain code quality and prevents breaking changes from being pushed without verification.
 
-Happy hacking! 🎭
+
+## Testing with Playwright
+
+In this project, we use **Playwright** for end-to-end testing. Below are some useful commands you can run within the test directory:
+
+### Playwright Commands
+
+| Command | Description |
+| ------- | ----------- |
+| `npx playwright test` | Runs the end-to-end tests. |
+| `npx playwright test --ui` | Starts the interactive UI mode to run the tests visually. |
+| `npx playwright test --project=chromium` | Runs the tests only on the Desktop Chrome browser. |
+| `npx playwright test example` | Runs tests for a specific file. |
+| `npx playwright test --debug` | Runs tests in debug mode to troubleshoot issues. |
+| `npx playwright codegen` | Automatically generates tests using the Codegen mode. |
+
+### Recommended Command
+
+| Command | Description |
+| ------- | ----------- |
+| `npm run test:e2e` | Runs the end-to-end tests with Playwright in your environment. |
+
+### Example Files
+
+| File | Description |
+| ---- | ----------- |
+| `./tests/example.spec.ts` | Example end-to-end test. |
+| `./tests-examples/demo-todo-app.spec.ts` | End-to-end tests for the Demo Todo App. |
+| `./playwright.config.ts` | Playwright Test configuration. |
+
+For more information on Playwright, visit the official documentation:  
+[https://playwright.dev/docs/intro](https://playwright.dev/docs/intro) ✨
+
+🎭 Happy hacking! 🎭
+
 
 
