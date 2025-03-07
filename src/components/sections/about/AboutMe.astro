@@ -9,11 +9,15 @@ import TechSkills from "./TechSkills.astro";
   <div
     class="flex flex-col items-center justify-center gap-6 lg:flex-row lg:items-start"
   >
-    <Image
-      src={profileImage}
-      alt="Descripción de la imagen"
-      class="m-2 h-58 w-58 rounded-full border-2 border-blue-900 object-cover"
-    />
+    <div
+      class="m-2 h-58 w-58 overflow-hidden rounded-full border-2 border-blue-900"
+    >
+      <Image
+        src={profileImage}
+        alt="Imagen de perfil"
+        class="h-full w-full object-cover"
+      />
+    </div>
     <div
       class="info-box text-md relative max-w-4xl rounded-lg bg-white p-8 text-justify shadow-lg lg:text-lg xl:text-xl"
     >
