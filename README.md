@@ -12,6 +12,7 @@
 7. [Commitlint](#commitlint)
 8. [Husky Setup](#husky-setup)
 9. [Testing with Playwright](#testing-with-playwright)
+10. [Folder Structure](#folder-structure)
 
 
 ## Requirements
@@ -231,5 +232,31 @@ For more information on Playwright, visit the official documentation:
 
 🎭 Happy hacking! 🎭
 
+## Folder Structure
 
+This is the project's folder organization scheme:
+
+```md
+.
+│
+public/
+│
+src/
+├── assets/
+├── components/
+│   ├── sections/
+│   │   ├── about/
+│   │   │   └── ui/
+│   │   ├── education/
+│   │   │   └── ui/
+│   │   ├── experience/
+│   │   ├── home/
+│   │   └── projects/
+│   │       └── ui/
+│   ├── ui/
+│   ├── layouts/
+│   ├── pages/
+│   └── styles/
+└──tests/
+```
 
