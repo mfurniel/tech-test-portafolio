@@ -1,9 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import linkIcon from "../../../../../public/images/portfolioReactProject.png";
-
-type ImageMetadata = typeof linkIcon;
-
+import type { ImageMetadata } from "astro";
 export interface Props {
   imageSrc: ImageMetadata;
   altText: string;

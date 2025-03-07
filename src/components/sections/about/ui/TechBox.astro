@@ -1,8 +1,7 @@
 ---
 import { Image } from "astro:assets";
-import sampleImage from "../../../../../public/icons/html.svg";
+import type { ImageMetadata } from "astro";
 
-type ImageMetadata = typeof sampleImage;
 export interface Props {
   name: string;
   icon: ImageMetadata;

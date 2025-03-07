@@ -10,8 +10,7 @@ import postgresIcon from "../../public/icons/postgresql.svg";
 import pythonIcon from "../../public/icons/python.svg";
 import cssIcon from "../../public/icons/css.svg";
 import htmlIcon from "../../public/icons/html.svg";
-
-type ImageMetadata = typeof htmlIcon;
+import type { ImageMetadata } from "astro";
 
 export interface Tech {
   name: string;
