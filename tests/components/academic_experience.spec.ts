@@ -29,7 +29,7 @@ test.describe("Academic Experience Section", () => {
     for (let i = 0; i < experiencesAcademyc.length; i++) {
       const experience = experiencesAcademyc[i];
 
-      await page.goto("${experienceSelector}");
+      await page.goto(`${experienceSelector} section`);
 
       const experienceButton = page
         .locator(`${experienceSelector} button`)

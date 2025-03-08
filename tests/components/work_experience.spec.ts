@@ -29,7 +29,7 @@ test.describe("Experience Section", () => {
     for (let i = 0; i < experiences.length; i++) {
       const experience = experiences[i];
 
-      await page.goto("${experienceSelector}");
+      await page.goto(`${experienceSelector} section`);
 
       const experienceButton = page
         .locator(`${experienceSelector} button`)
