@@ -65,7 +65,7 @@ export const experiencesAcademyc: Experience[] = [
     technologies: ["Flask", "Heroku", "PostgreSQL"],
   },
   {
-    company: "Base de datos con PostgreSQL",
+    company: "Base de datos",
     role: "Estudiante @ Bases de Datos",
     duration: null,
     responsibilities: [
