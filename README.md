@@ -62,7 +62,7 @@ To run this project, ensure you have the following installed:
 To set up the project locally:
 
 ```bash
-git clone github.com/mfurniel/tech-test-portfolio.git
+git clone git@github.com:mfurniel/tech-test-portafolio.git
 cd tech-test-portfolio
 npm install
 npm run dev
