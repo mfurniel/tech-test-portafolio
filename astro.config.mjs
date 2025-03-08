@@ -6,6 +6,8 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-
   integrations: [vue()],
+  experimental: {
+    svg: true,
+  },
 });
