@@ -1,10 +1,10 @@
 <template>
   <button
     @click="toggle"
-    class="fixed top-4 z-50 p-2 border border-gray-400 bg-white lg:hidden transition-all duration-300 ease-in-out"
+    class="fixed top-4 z-50 border border-gray-400 bg-white p-2 transition-all duration-300 ease-in-out lg:hidden"
     :class="isOpen ? 'left-32' : 'left-4'"
   >
-    <img src="icons/menu.svg" alt="Menú" class="w-4 h-4" />
+    <img src="icons/menu.svg" alt="Menú" class="h-4 w-4" />
   </button>
 </template>
 

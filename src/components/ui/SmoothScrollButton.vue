@@ -1,14 +1,14 @@
 <template>
   <button @click="smoothScroll" :aria-label="alt">
-    <img :src="icon" :alt="alt" class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
+    <img :src="icon" :alt="alt" class="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8" />
   </button>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'SmoothScrollButton',
+  name: "SmoothScrollButton",
   props: {
     target: {
       type: String,
@@ -28,8 +28,8 @@ export default defineComponent({
       const element = document.querySelector(this.target);
       if (element) {
         element.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
+          behavior: "smooth",
+          block: "start",
         });
       }
     },

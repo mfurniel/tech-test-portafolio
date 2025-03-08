@@ -1,25 +1,29 @@
 <template>
   <section
     v-if="experience"
-    class="col-span-3 min-h-100 rounded-tr-4xl rounded-br-4xl bg-white shadow-lg "
+    class="col-span-3 min-h-100 rounded-tr-4xl rounded-br-4xl bg-white shadow-lg"
   >
     <div class="space-y-4 p-8">
-      <h2 class="text-xl md:text-2xl font-semibold text-blue-900">
+      <h2 class="text-xl font-semibold text-blue-900 md:text-2xl">
         {{ experience.role }}
       </h2>
-      <p class="text-md md:text-xl text-gray-600">
+      <p class="text-md text-gray-600 md:text-xl">
         {{ experience.duration }}
       </p>
       <ul class="list-inside list-disc">
         <li
           v-for="(responsibility, i) in experience.responsibilities"
           :key="i"
-          class="text-lg md:text-xl text-gray-700"
+          class="text-lg text-gray-700 md:text-xl"
           data-testid="responsibilities"
         >
           {{ responsibility }}
         </li>
-        <li v-if="experience.technologies" class="text-lg md:text-xl text-blue-900">Tecnologías utilizadas:
+        <li
+          v-if="experience.technologies"
+          class="text-lg text-blue-900 md:text-xl"
+        >
+          Tecnologías utilizadas:
           <span
             v-for="(technology, i) in experience.technologies"
             :key="i"
@@ -27,9 +31,7 @@
             data-testid="technologies"
           >
             {{ technology }}
-            <span v-if="i < experience.technologies.length - 1">
-              -
-            </span>
+            <span v-if="i < experience.technologies.length - 1"> - </span>
           </span>
         </li>
       </ul>
@@ -38,7 +40,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, type PropType } from 'vue';
+import { defineComponent, type PropType } from "vue";
 
 interface Experience {
   company: string;

@@ -3,14 +3,14 @@
     <div
       v-for="(experience, index) in experiences"
       :key="index"
-      class="mb-3 hover:bg-blue-900/20 rounded-tl-2xl rounded-bl-2xl"
+      class="mb-3 rounded-tl-2xl rounded-bl-2xl hover:bg-blue-900/20"
       :class="{
         'bg-white shadow-md': selectedExperienceIndex === index,
       }"
     >
       <button
         @click="selectExperience(index)"
-        class="p-4 h-full w-full text-left text-xl font-semibold text-blue-900 hover:text-red-600 focus:outline-none"
+        class="h-full w-full p-4 text-left text-xl font-semibold text-blue-900 hover:text-red-600 focus:outline-none"
         :class="{
           'text-red-600': selectedExperienceIndex === index,
         }"
@@ -22,7 +22,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, type PropType } from 'vue';
+import { defineComponent, type PropType } from "vue";
 
 interface Experience {
   company: string;
@@ -44,10 +44,10 @@ export default defineComponent({
       required: true,
     },
   },
-  emits: ['select-experience'],
+  emits: ["select-experience"],
   methods: {
     selectExperience(index: number) {
-      this.$emit('select-experience', index);
+      this.$emit("select-experience", index);
     },
   },
 });
