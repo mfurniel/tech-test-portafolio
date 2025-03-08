@@ -9,19 +9,19 @@ Welcome to **Tech Test Portfolio**, a technical challenge focused on building a 
 
 ## 📌 Table of Contents
 
-1. [About the Project](#📖-about-the-project)
-2. [Requirements](#⚙️-requirements)
-3. [Installation and Setup](#🚀-installation-and-setup)
-4. [Project Structure](#📂-project-structure)
-5. [Development and Commands](#💻-development-and-commands)
-6. [Code Quality](#🎨-code-quality)
-7. [Version Control](#🔗-version-control)
-8. [Testing with Playwright](#🧪-testing-with-playwright)
-9. [Submission and Evaluation](#📌-submission-and-evaluation)
+1. [About the Project](#about-the-project)
+2. [Requirements](#requirements)
+3. [Installation and Setup](#installation-and-setup)
+4. [Project Structure](#project-structure)
+5. [Development and Commands](#development-and-commands)
+6. [Code Quality](#code-quality)
+7. [Version Control](#version-control)
+8. [Testing with Playwright](#testing-with-playwright)
+9. [Submission and Evaluation](#submission-and-evaluation)
 
 ---
 
-## 📖 About the Project
+## About the Project
 
 This project involves creating a **landing page** using:
 
@@ -48,7 +48,7 @@ The landing page must include:
 
 ---
 
-## ⚙️ Requirements
+## Requirements
 
 To run this project, ensure you have the following installed:
 
@@ -57,7 +57,7 @@ To run this project, ensure you have the following installed:
 
 ---
 
-## 🚀 Installation and Setup
+## Installation and Setup
 
 To set up the project locally:
 
@@ -72,7 +72,7 @@ The development server will run at `http://localhost:4321`.
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```md
 .
@@ -103,7 +103,7 @@ src/
 
 ---
 
-## 💻 Development and Commands
+## Development and Commands
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
@@ -116,7 +116,7 @@ src/
 
 ---
 
-## 🎨 Code Quality
+## Code Quality
 
 This project uses tools to maintain clean and consistent code:
 
@@ -138,7 +138,7 @@ This project uses tools to maintain clean and consistent code:
 
 ---
 
-## 🔗 Version Control
+## Version Control
 
 This project follows commit conventions enforced by **Commitlint**.
 
@@ -180,7 +180,7 @@ Additionally, **Husky** runs validations before each commit and push:
 
 ---
 
-## 🧪 Testing with Playwright
+## Testing with Playwright
 
 End-to-end tests are conducted using **Playwright** to ensure functionality.
 
@@ -200,7 +200,7 @@ npm run test:functional
 ```
 ---
 
-## 📌 Submission and Evaluation
+## Submission and Evaluation
 
 ### 📤 Submission Requirements
 
