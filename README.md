@@ -9,15 +9,15 @@ Welcome to **Tech Test Portfolio**, a technical challenge focused on building a 
 
 ## 📌 Table of Contents
 
-1. [About the Project](#about-the-project)
-2. [Requirements](#requirements)
-3. [Installation and Setup](#installation-and-setup)
-4. [Project Structure](#project-structure)
-5. [Development and Commands](#development-and-commands)
-6. [Code Quality](#code-quality)
-7. [Version Control](#version-control)
-8. [Testing with Playwright](#testing-with-playwright)
-9. [Submission and Evaluation](#submission-and-evaluation)
+1. [About the Project](#📖-about-the-project)
+2. [Requirements](#⚙️-requirements)
+3. [Installation and Setup](#🚀-installation-and-setup)
+4. [Project Structure](#📂-project-structure)
+5. [Development and Commands](#💻-development-and-commands)
+6. [Code Quality](#🎨-code-quality)
+7. [Version Control](#🔗-version-control)
+8. [Testing with Playwright](#🧪-testing-with-playwright)
+9. [Submission and Evaluation](#📌-submission-and-evaluation)
 
 ---
 
