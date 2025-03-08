@@ -92,10 +92,13 @@ src/
 │   │   ├── home/
 │   │   └── projects/
 │   │       └── ui/
-│   ├── ui/
-│   ├── layouts/
-│   ├── pages/
-│   └── styles/
+│   ├── tests/
+│   │       ├── layout/  
+│   │       └── pages/  
+│   └── shared/
+├── layouts/
+├── pages/
+└── styles/
 
 ```
 
