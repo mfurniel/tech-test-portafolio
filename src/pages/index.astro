@@ -1,26 +1,18 @@
 ---
 import AboutMe from "../components/sections/about/AboutMe.astro";
 import Education from "../components/sections/education/Education.astro";
-import Experience from "../components/sections/experience/Experience.vue";
+import AcademicExperience from "../components/sections/experience/AcademicExperience.astro";
+import WorkExperience from "../components/sections/experience/WorkExperience.astro";
 import Home from "../components/sections/home/Home.astro";
 import Projects from "../components/sections/projects/Projects.astro";
-import SectionContainer from "../components/ui/SectionContainer.astro";
 import Layout from "../layouts/Layout.astro";
-import { experiences, experiencesAcademyc } from "../data/experiences";
 ---
 
 <Layout>
   <Home />
   <AboutMe />
   <Education />
-  <SectionContainer title="Experiencia" idSection="work_experience">
-    <Experience client:load experiences={experiences} />
-  </SectionContainer>
-  <SectionContainer
-    title="Actividades Académicas"
-    idSection="academic_experience"
-  >
-    <Experience client:load experiences={experiencesAcademyc} />
-  </SectionContainer>
+  <WorkExperience />
+  <AcademicExperience />
   <Projects />
 </Layout>

@@ -1,0 +1,12 @@
+---
+import SectionContainer from "../../shared/SectionContainer.astro";
+import Experience from "./ui/Experience.vue";
+import { experiencesAcademyc } from "../../../data/experiences";
+---
+
+<SectionContainer
+  title="Actividades Académicas"
+  idSection="academic_experience"
+>
+  <Experience client:load experiences={experiencesAcademyc} />
+</SectionContainer>

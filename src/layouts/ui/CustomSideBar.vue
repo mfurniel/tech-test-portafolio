@@ -6,7 +6,7 @@
       class="fixed top-0 left-0 flex h-screen w-28 transform flex-col items-center justify-between border border-gray-200 bg-white p-4 text-black transition-transform duration-300 ease-in-out lg:translate-x-0"
       :class="{ '-translate-x-full': !isSidebarOpen }"
     >
-      <SmoothScrollLink
+      <SmoothScrollButton
         target="#home"
         icon="icons/logo.svg"
         alt="Inicio"
@@ -16,42 +16,42 @@
       <nav>
         <ul class="flex flex-col items-center gap-6">
           <li>
-            <SmoothScrollLink
+            <SmoothScrollButton
               target="#home"
               icon="icons/home.svg"
               alt="Inicio"
             />
           </li>
           <li>
-            <SmoothScrollLink
+            <SmoothScrollButton
               target="#about"
               icon="icons/profile.svg"
               alt="Sobre Mí"
             />
           </li>
           <li>
-            <SmoothScrollLink
+            <SmoothScrollButton
               target="#education"
               icon="icons/education.svg"
               alt="Educación"
             />
           </li>
           <li>
-            <SmoothScrollLink
+            <SmoothScrollButton
               target="#work_experience"
               icon="icons/portfolio.svg"
               alt="Experiencia"
             />
           </li>
           <li>
-            <SmoothScrollLink
+            <SmoothScrollButton
               target="#academic_experience"
               icon="icons/backpack.svg"
               alt="Actividades Académicas"
             />
           </li>
           <li>
-            <SmoothScrollLink
+            <SmoothScrollButton
               target="#projects"
               icon="icons/stack.svg"
               alt="Proyectos"
@@ -71,13 +71,13 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import SmoothScrollLink from "./SmoothScrollButton.vue";
+import SmoothScrollButton from "../../components/shared/ui/SmoothScrollButton.vue";
 import ToggleButton from "./ToggleButton.vue";
 
 export default defineComponent({
   name: "CustomSideBar",
   components: {
-    SmoothScrollLink,
+    SmoothScrollButton,
     ToggleButton,
   },
   data() {

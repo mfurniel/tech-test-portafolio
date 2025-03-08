@@ -1,0 +1,9 @@
+---
+import SectionContainer from "../../shared/SectionContainer.astro";
+import Experience from "./ui/Experience.vue";
+import { experiences } from "../../../data/experiences";
+---
+
+<SectionContainer title="Experiencia" idSection="work_experience">
+  <Experience client:load experiences={experiences} />
+</SectionContainer>

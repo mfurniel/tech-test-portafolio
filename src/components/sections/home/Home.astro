@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import profileImage from "../../../../public/images/profile.webp";
-import SmoothScrollLink from "../../ui/SmoothScrollButton.vue";
+import SmoothScrollButton from "../../shared/ui/SmoothScrollButton.vue";
 import GithubIcon from "../../../../public/icons/github.svg";
 import LinkedinIcon from "../../../../public/icons/linkedin.svg";
 ---
@@ -48,7 +48,7 @@ import LinkedinIcon from "../../../../public/icons/linkedin.svg";
   </div>
   <div class="absolute bottom-12 flex list-none flex-col items-center gap-1">
     <span class="text-md font-bold text-blue-900">Sigue Bajando!</span>
-    <SmoothScrollLink
+    <SmoothScrollButton
       target="#about"
       icon="icons/scrollarrowtodown.svg"
       alt="Sobre Mí"
