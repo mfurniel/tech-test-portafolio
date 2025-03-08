@@ -7,6 +7,11 @@ test.describe("About Section (#about)", () => {
     await page.goto("/#about");
   });
 
+  test("Should display the title", async ({ page }) => {
+    const title = page.locator(`${aboutSelector} h1`).first();
+    await expect(title).toContainText("Sobre mí");
+  });
+
   test("Should display the profile image", async ({ page }) => {
     const profileImage = page.locator(
       `${aboutSelector} img[alt='Imagen de perfil']`,
@@ -24,14 +29,13 @@ test.describe("About Section (#about)", () => {
   });
 
   test("Should display the list of technologies", async ({ page }) => {
-    const firtstechList = page.locator(`${aboutSelector} ul`).first();
-    await expect(firtstechList).toContainText("React");
-    await expect(firtstechList).toContainText("Vue");
-    await expect(firtstechList).toContainText("TypeScript");
-    const secondtechList = page.locator(`${aboutSelector} ul`).nth(1);
-    await expect(secondtechList).toContainText("Ruby and Rails");
-    await expect(secondtechList).toContainText("Flutter");
-    await expect(secondtechList).toContainText("Tailwind");
+    const techLists = await page.locator(`${aboutSelector} ul`).all();
+    await expect(techLists[0]).toContainText("React");
+    await expect(techLists[0]).toContainText("Vue");
+    await expect(techLists[0]).toContainText("TypeScript");
+    await expect(techLists[1]).toContainText("Ruby and Rails");
+    await expect(techLists[1]).toContainText("Flutter");
+    await expect(techLists[1]).toContainText("Tailwind");
   });
 
   test("Should display the CV download button", async ({ page }) => {
