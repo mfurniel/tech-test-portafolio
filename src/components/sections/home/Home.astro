@@ -2,6 +2,8 @@
 import { Image } from "astro:assets";
 import profileImage from "../../../../public/images/profile.webp";
 import SmoothScrollLink from "../../ui/SmoothScrollButton.vue";
+import githunIcon from "../../../../public/icons/github.svg";
+import linkedinIcon from "../../../../public/icons/linkedin.svg";
 ---
 
 <section
@@ -23,8 +25,8 @@ import SmoothScrollLink from "../../ui/SmoothScrollButton.vue";
       rel="noopener noreferrer"
       aria-label="Visitar perfil de Github"
     >
-      <img
-        src="/icons/github.svg"
+      <Image
+        src={githunIcon}
         alt="GitHub"
         class="h-8 w-8 transition-all duration-500 hover:brightness-150 hover:invert hover:saturate-150"
       />
@@ -36,8 +38,8 @@ import SmoothScrollLink from "../../ui/SmoothScrollButton.vue";
       rel="noopener noreferrer"
       aria-label="Visitar perfil de LinkedIn"
     >
-      <img
-        src="/icons/linkedin.svg"
+      <Image
+        src={linkedinIcon}
         alt="LinkedIn"
         class="h-8 w-8 transition-all duration-500 hover:brightness-150 hover:invert hover:saturate-150"
       />
