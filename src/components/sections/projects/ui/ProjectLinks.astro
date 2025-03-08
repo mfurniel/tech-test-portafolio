@@ -1,0 +1,35 @@
+---
+import IconLink from "./IconLink.astro";
+import githubIImage from "../../../../../public/icons/github.svg";
+import linkIcon from "../../../../../public/icons/link.svg";
+
+export interface Props {
+  projectLink?: string;
+  githubLink?: string;
+}
+
+const { projectLink, githubLink } = Astro.props;
+---
+
+<div class="mb-4 flex justify-end gap-4">
+  {
+    projectLink && (
+      <IconLink
+        href={projectLink}
+        src={linkIcon}
+        alt="Link Icon"
+        ariaLabel="Visitar Proyecto"
+      />
+    )
+  }
+  {
+    githubLink && (
+      <IconLink
+        href={githubLink}
+        src={githubIImage}
+        alt="GitHub Icon"
+        ariaLabel="Visitar Repositorio"
+      />
+    )
+  }
+</div>

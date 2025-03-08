@@ -1,0 +1,18 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+export interface Props {
+  href: string;
+  src: ImageMetadata;
+  alt: string;
+  ariaLabel: string;
+}
+
+const { href, src, alt, ariaLabel } = Astro.props;
+---
+
+<a href={href} target="_blank" rel="noopener noreferrer" aria-label={ariaLabel}>
+  <Image src={src} alt={alt} class="h-10 w-10 rounded-full bg-yellow-300 p-2" />
+  <span class="sr-only">{ariaLabel}</span>
+</a>

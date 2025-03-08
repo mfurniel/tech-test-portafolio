@@ -1,0 +1,19 @@
+---
+interface Props {
+  techs?: string[];
+}
+
+const { techs } = Astro.props;
+---
+
+<div
+  class="mb-4 opacity-0 transition-all duration-500 ease-in-out group-hover:translate-x-4 group-hover:opacity-100"
+>
+  <ul class="flex w-min gap-4 rounded-br-xl rounded-bl-xl bg-red-500 pr-4 pl-4">
+    {
+      techs?.map((tech) => (
+        <li class="text-md pt-2 font-semibold text-white">{tech}</li>
+      ))
+    }
+  </ul>
+</div>
