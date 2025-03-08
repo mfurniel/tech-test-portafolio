@@ -16,7 +16,7 @@ const { imageSrc, altText, title, description, bgColor } = Astro.props as Props;
   class={`flex flex-col items-center justify-start p-10 rounded-2xl gap-4 ${bgColor} text-center transform transition-all duration-300 hover:scale-105 hover:translate-y-[-5px]`}
 >
   <div class="h-26 w-24 object-contain sm:h-28 sm:w-24">
-    <Image src={imageSrc} alt={altText} class="object contain" />
+    <Image src={imageSrc} height={120} width={98} alt={altText} />
   </div>
   <h2 class="text-2xl font-bold">
     {title}
