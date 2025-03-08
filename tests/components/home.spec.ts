@@ -34,10 +34,10 @@ test.describe("Home Section (#home)", () => {
 
   test("Should display the social media icons", async ({ page }) => {
     const githubIcon = page.locator(
-      `${homeSelector} a[aria-label='Visitar perfil de Github'] img`,
+      `${homeSelector} a[aria-label='Visitar perfil de Github']`,
     );
     const linkedinIcon = page.locator(
-      `${homeSelector} a[aria-label='Visitar perfil de LinkedIn'] img`,
+      `${homeSelector} a[aria-label='Visitar perfil de LinkedIn']`,
     );
 
     await expect(githubIcon).toBeVisible();
