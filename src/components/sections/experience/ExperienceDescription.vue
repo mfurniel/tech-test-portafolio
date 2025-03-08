@@ -25,7 +25,7 @@
             class="text-red-600"
           >
             {{ technology }}
-            <span v-if="i < experience.responsibilities.length - 1">
+            <span v-if="i < experience.technologies.length - 1">
               -
             </span>
           </span>
