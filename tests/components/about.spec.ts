@@ -1,62 +1,47 @@
 import { test, expect } from "@playwright/test";
 
-test.describe("About Component", () => {
-  test("should render the main title", async ({ page }) => {
-    await page.goto("/");
-    await expect(page.locator("#about h1.text-4xl")).toHaveText("Sobre mí");
+test.describe("About Section (#about)", () => {
+  const aboutSelector = "#about";
+
+  test.beforeEach(async ({ page }) => {
+    await page.goto("/#about");
   });
 
-  // test.describe("Profile Image", () => {
-  //   test("should render the profile image", async ({ page }) => {
-  //     await page.goto("/");
-  //     await expect(page.locator('img[alt="Imagen de perfil"]')).toBeVisible();
-  //   });
-  // });
-
-  test.describe("Info Box", () => {
-    test("should render the info box with correct text", async ({ page }) => {
-      await page.goto("/");
-      await expect(page.locator(".info-box p:first-child")).toContainText(
-        "¡Hola! Soy Mauricio, Ingeniero Civil Informático",
-      );
-      await expect(page.locator(".info-box p:nth-child(2)")).toContainText(
-        "Actualmente, me estoy enfocando en ampliar mi portafolio",
-      );
-    });
-
-    test("should render the tech list", async ({ page }) => {
-      await page.goto("/");
-      await expect(
-        page.locator(".info-box ul:first-child li:first-child"),
-      ).toHaveText("React");
-      await expect(
-        page.locator(".info-box ul:nth-child(2) li:last-child"),
-      ).toHaveText("Tailwind");
-    });
-
-    test("should render the download CV link", async ({ page }) => {
-      await page.goto("/");
-      await expect(page.locator('a[href*="drive.google.com"]')).toBeVisible();
-      await expect(page.locator('a[href*="drive.google.com"]')).toHaveText(
-        "Descarga mi CV",
-      );
-    });
-
-    test("should apply the correct styling", async ({ page }) => {
-      await page.goto("/");
-      const infoBox = page.locator(".info-box");
-      await expect(infoBox).toHaveClass(/rounded-lg/);
-      await expect(infoBox).toHaveClass(/bg-white/);
-      await expect(infoBox).toHaveClass(/p-8/);
-      await expect(infoBox).toHaveClass(/shadow-lg/);
-    });
+  test("Should display the profile image", async ({ page }) => {
+    const profileImage = page.locator(
+      `${aboutSelector} img[alt='Imagen de perfil']`,
+    );
+    await expect(profileImage).toBeVisible();
   });
 
-  test.describe("Tech Boxes Grid", () => {
-    test("should render all TechBox components", async ({ page }) => {
-      await page.goto("/");
-      const techBoxes = await page.locator(".grid.grid-cols-2 > div");
-      await expect(techBoxes).toHaveCount(12);
-    });
+  test("Should display the about text", async ({ page }) => {
+    const introParagraph = page.locator(`${aboutSelector} p`).first();
+    const secondParagraph = page.locator(`${aboutSelector} p`).nth(1);
+    await expect(introParagraph).toContainText("¡Hola! Soy Mauricio");
+    await expect(secondParagraph).toContainText(
+      "Actualmente, me estoy enfocando en",
+    );
+  });
+
+  test("Should display the list of technologies", async ({ page }) => {
+    const firtstechList = page.locator(`${aboutSelector} ul`).first();
+    await expect(firtstechList).toContainText("React");
+    await expect(firtstechList).toContainText("Vue");
+    await expect(firtstechList).toContainText("TypeScript");
+    const secondtechList = page.locator(`${aboutSelector} ul`).nth(1);
+    await expect(secondtechList).toContainText("Ruby and Rails");
+    await expect(secondtechList).toContainText("Flutter");
+    await expect(secondtechList).toContainText("Tailwind");
+  });
+
+  test("Should display the CV download button", async ({ page }) => {
+    const cvButton = page.locator(
+      `${aboutSelector} a[aria-label='Descargar mi currículum vitae']`,
+    );
+    await expect(cvButton).toBeVisible();
+    await expect(cvButton).toHaveAttribute(
+      "href",
+      "https://drive.google.com/file/d/1NsNn5XnQY9C3z0oJMXnSmip897n0QXmm/view?usp=sharing",
+    );
   });
 });

@@ -1,40 +1,51 @@
 import { test, expect } from "@playwright/test";
 
-test.describe("Home Component", () => {
-  test("should display personal information", async ({ page }) => {
-    await page.goto("/");
-    await expect(page.locator("text=Mauricio Furniel Campos")).toBeVisible();
-    // await expect(page.getByRole('heading', { name: 'Ingeniero Civil Informático' })).toBeVisible();
-    // await expect(page.locator('text=Universidad de Concepción')).toBeVisible();
+test.describe("Home Section (#home)", () => {
+  const homeSelector = "#home";
+
+  test.beforeEach(async ({ page }) => {
+    await page.goto("/#home");
   });
 
-  test.describe("Element Visibility", () => {
-    // test("should display profile image", async ({ page }) => {
-    //   await page.goto("/");
-    //   await expect(page.locator('img[alt="Imagen de perfil"]')).toBeVisible();
-    // });
-
-    test('should display "Sigue Bajando!" text', async ({ page }) => {
-      await page.goto("/");
-      await expect(page.locator("text=Sigue Bajando!")).toBeVisible();
-    });
-
-    test("should display github icon", async ({ page }) => {
-      await page.goto("/");
-      await expect(page.locator('img[alt="GitHub"]')).toBeVisible();
-    });
-
-    test("should display linkedin icon", async ({ page }) => {
-      await page.goto("/");
-      await expect(page.locator('img[alt="LinkedIn"]')).toBeVisible();
-    });
+  test("Should display the profile image", async ({ page }) => {
+    const profileImage = page.locator(
+      `${homeSelector} img[alt='Imagen de perfil']`,
+    );
+    await expect(profileImage).toBeVisible();
   });
 
-  test.describe("Responsiveness", () => {
-    test("should hide sidebar on mobile devices", async ({ page }) => {
-      await page.setViewportSize({ width: 375, height: 667 });
-      await page.goto("/");
-      await expect(page.locator("#sideBar")).not.toBeVisible();
-    });
+  test("Should display the full name", async ({ page }) => {
+    const fullName = page.locator(`${homeSelector} h1`);
+    await expect(fullName).toBeVisible();
+    await expect(fullName).toHaveText("Mauricio Furniel Campos");
+  });
+
+  test("Should display the professional title", async ({ page }) => {
+    const jobTitle = page.locator(`${homeSelector} h2`);
+    await expect(jobTitle).toBeVisible();
+    await expect(jobTitle).toHaveText("Ingeniero Civil Informático");
+  });
+
+  test("Should display the university", async ({ page }) => {
+    const university = page.locator(`${homeSelector} p.text-s`);
+    await expect(university).toBeVisible();
+    await expect(university).toHaveText("Universidad de Concepción");
+  });
+
+  test("Should display the social media icons", async ({ page }) => {
+    const githubIcon = page.locator(
+      `${homeSelector} a[aria-label='Visitar perfil de Github'] img`,
+    );
+    const linkedinIcon = page.locator(
+      `${homeSelector} a[aria-label='Visitar perfil de LinkedIn'] img`,
+    );
+
+    await expect(githubIcon).toBeVisible();
+    await expect(linkedinIcon).toBeVisible();
+  });
+
+  test("Should display the 'Scroll Down!' button", async ({ page }) => {
+    const scrollButton = page.locator(`${homeSelector} .animate-pulse`);
+    await expect(scrollButton).toBeVisible();
   });
 });
