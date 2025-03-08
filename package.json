@@ -13,7 +13,7 @@
     "lint:css:fix": "stylelint 'src/**/*.{css,scss,vue,astro}' --fix",
     "format": "prettier --write src",
     "prepare": "husky",
-    "test:e2e": "playwright test"
+    "test:functional": "playwright test"
   },
   "dependencies": {
     "@astrojs/vue": "^5.0.7",
