@@ -18,8 +18,8 @@
           <li><SmoothScrollLink target="#home" icon="icons/home.svg" alt="Inicio" /></li>
           <li><SmoothScrollLink target="#about" icon="icons/profile.svg" alt="Sobre Mí" /></li>
           <li><SmoothScrollLink target="#education" icon="icons/education.svg" alt="Educación" /></li>
-          <li><SmoothScrollLink target="#experience" icon="icons/portfolio.svg" alt="Experiencia" /></li>
-          <li><SmoothScrollLink target="#activities" icon="icons/backpack.svg" alt="Actividades Académicas" /></li>
+          <li><SmoothScrollLink target="#work_experience" icon="icons/portfolio.svg" alt="Experiencia" /></li>
+          <li><SmoothScrollLink target="#academic_experience" icon="icons/backpack.svg" alt="Actividades Académicas" /></li>
           <li><SmoothScrollLink target="#projects" icon="icons/stack.svg" alt="Proyectos" /></li>
         </ul>
       </nav>

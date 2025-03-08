@@ -13,10 +13,13 @@ import { experiences, experiencesAcademyc } from "../data/experiences";
   <Home />
   <AboutMe />
   <Education />
-  <SectionContainer title="Experiencia" idSection="experience">
+  <SectionContainer title="Experiencia" idSection="work_experience">
     <Experience client:load experiences={experiences} />
   </SectionContainer>
-  <SectionContainer title="Actividades Académicas" idSection="activities">
+  <SectionContainer
+    title="Actividades Académicas"
+    idSection="academic_experience"
+  >
     <Experience client:load experiences={experiencesAcademyc} />
   </SectionContainer>
   <Projects />
