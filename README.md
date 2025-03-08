@@ -63,7 +63,7 @@ To set up the project locally:
 
 ```bash
 git clone git@github.com:mfurniel/tech-test-portafolio.git
-cd tech-test-portfolio
+cd tech-test-portafolio
 npm install
 npm run dev
 ```
