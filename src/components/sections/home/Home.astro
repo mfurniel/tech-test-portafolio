@@ -10,11 +10,14 @@ import LinkedinIcon from "../../../../public/icons/linkedin.svg";
   id="home"
   class="flex h-screen w-full flex-col items-center justify-center gap-2 bg-[url('/backgroundHome.svg')] bg-cover pb-32 text-center"
 >
-  <div
-    class="m-2 h-40 w-40 overflow-hidden rounded-full border-2 border-blue-900"
-  >
-    <Image src={profileImage} alt="Imagen de perfil" class="object-cover" />
-  </div>
+  <Image
+    src={profileImage}
+    alt="Imagen de perfil"
+    height={160}
+    width={160}
+    class="rounded-full border-2 border-blue-900"
+    loading="eager"
+  />
   <h1 class="text-3xl font-bold text-blue-900">Mauricio Furniel Campos</h1>
   <h2 class="text-xl font-semibold">Ingeniero Civil Informático</h2>
   <p class="text-s font-bold text-gray-500">Universidad de Concepción</p>
