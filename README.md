@@ -93,7 +93,6 @@ src/
 │   │   └── projects/
 │   │       └── ui/
 │   ├── tests/
-│   │       ├── layout/  
 │   │       └── pages/  
 │   └── shared/
 ├── layouts/
