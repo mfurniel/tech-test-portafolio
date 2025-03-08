@@ -9,7 +9,7 @@ test.describe("About Section (#about)", () => {
 
   test("Should display the title", async ({ page }) => {
     const title = page.locator(`${aboutSelector} h1`).first();
-    await expect(title).toContainText("Sobre mí");
+    await expect(title).toHaveText("Sobre mí");
   });
 
   test("Should display the profile image", async ({ page }) => {
