@@ -16,13 +16,13 @@ test.describe("Project Section (#projects)", () => {
     page,
   }) => {
     const glanzProjectCard = page.locator(`${projectSelector} section`).nth(0);
-    const title = await glanzProjectCard.locator("h1");
+    const title = glanzProjectCard.locator("h1");
     await expect(title).toHaveText("Glanz Optical Calculator Transposition");
-    const description = await glanzProjectCard.locator("p");
+    const description = glanzProjectCard.locator("p");
     await expect(description).toHaveText(
       "Glanz es una aplicación móvil creada para realizar el cálculo de la transposición óptica de recetas de lentes. Actualmente está disponible en la Play Store.",
     );
-    const projectLink = await glanzProjectCard.locator(
+    const projectLink = glanzProjectCard.locator(
       'a[href="https://play.google.com/store/apps/details?id=com.grauss.glanz"]',
     );
     await expect(projectLink).toHaveAttribute(
@@ -37,15 +37,15 @@ test.describe("Project Section (#projects)", () => {
     const portfolioProjectCard = page
       .locator(`${projectSelector} section`)
       .nth(1);
-    const title = await portfolioProjectCard.locator("h1");
+    const title = portfolioProjectCard.locator("h1");
     await expect(title).toHaveText("Personal Portfolio Website");
 
-    const description = await portfolioProjectCard.locator("p");
+    const description = portfolioProjectCard.locator("p");
     await expect(description).toHaveText(
       "Un portafolio personal creado para mostrar proyectos y habilidades como desarrollador web, utilizando tecnologías modernas.",
     );
 
-    const projectLink = await portfolioProjectCard.locator(
+    const projectLink = portfolioProjectCard.locator(
       'a[href="https://mfurniel.github.io/mfurnielc_portafolio/"]',
     );
     await expect(projectLink).toHaveAttribute(
@@ -60,10 +60,10 @@ test.describe("Project Section (#projects)", () => {
     const dashboardProjectCard = page
       .locator(`${projectSelector} section`)
       .nth(2);
-    const title = await dashboardProjectCard.locator("h1");
+    const title = dashboardProjectCard.locator("h1");
     await expect(title).toHaveText("Dashboard de Adherencia");
 
-    const description = await dashboardProjectCard.locator("p");
+    const description = dashboardProjectCard.locator("p");
     await expect(description).toHaveText(
       "Dashboard creado para mostrar la adherencia de los pacientes a sus tratamientos médicos.",
     );
@@ -75,15 +75,15 @@ test.describe("Project Section (#projects)", () => {
     const techTestProjectCard = page
       .locator(`${projectSelector} section`)
       .nth(3);
-    const title = await techTestProjectCard.locator("h1");
+    const title = techTestProjectCard.locator("h1");
     await expect(title).toHaveText("Portofolio de Prueba Técnica");
 
-    const description = await techTestProjectCard.locator("p");
+    const description = techTestProjectCard.locator("p");
     await expect(description).toHaveText(
       "Un portafolio personal creado como parte de una prueba técnica. ¡Estás trabajando en este proyecto ahora mismo!",
     );
 
-    const githubLink = await techTestProjectCard.locator(
+    const githubLink = techTestProjectCard.locator(
       'a[href="https://github.com/mfurniel/tech-test-portafolio"]',
     );
     await expect(githubLink).toHaveAttribute(
