@@ -125,16 +125,18 @@ This project uses tools to maintain clean and consistent code:
 - **Prettier** → Code formatting.
 - **Husky** → Pre-commit hooks to enforce code quality.
 - **Commitlint** → Enforces structured commit messages.
+- **Commitizen** → Helps create structured commit messages.
 
 ### 🛠️ Formatting and Linting Commands
 
-| Command                 | Action                                          |
-| :---------------------- | :---------------------------------------------- |
-| `npm run format`        | Formats the code using Prettier                |
-| `npm run lint`          | Checks for linting issues                      |
-| `npm run lint:fix`      | Fixes linting issues automatically              |
-| `npm run lint:css`      | Checks for style linting issues                 |
-| `npm run lint:css:fix`  | Fixes style linting issues automatically        |
+| Command                 | Action                                                    |
+| :---------------------- | :---------------------------------------------------------|
+| `npm run format`        | Formats the code using Prettier                           |
+| `npm run lint`          | Checks for linting issues                                 |
+| `npm run lint:fix`      | Fixes linting issues automatically                        |
+| `npm run lint:css`      | Checks for style linting issues                           |
+| `npm run lint:css:fix`  | Fixes style linting issues automatically                  |
+| `npm run commit`        | Guides you to create a standardized commit message.       |
 
 ---
 
@@ -171,12 +173,23 @@ Example:
 git commit -m "feat(auth): add login with JWT"
 ```
 
+Using **Commitizen**
+
+To create a commit message interactively, use Commitizen:
+```bash
+npm run commit
+```
+
+This will guide you through the process of creating a properly formatted commit message.
+
 Additionally, **Husky** runs validations before each commit and push:
 
 | Hook       | Action                                         |
 | ---------- | ----------------------------------------       |
 | `pre-commit` | Runs linting before committing               |
 | `pre-push`  | Runs build and functional tests before pushing|
+
+
 
 ---
 
