@@ -80,7 +80,7 @@ test.describe("Project Section (#projects)", () => {
 
     const description = techTestProjectCard.locator("p");
     await expect(description).toHaveText(
-      "Un portafolio personal creado como parte de una prueba técnica. ¡Estás trabajando en este proyecto ahora mismo!",
+      "Un portafolio personal creado como parte de una prueba técnica. ¡Estoy trabajando en este proyecto ahora mismo!",
     );
 
     const githubLink = techTestProjectCard.locator(
