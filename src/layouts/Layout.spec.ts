@@ -10,7 +10,7 @@ test.describe("Layout", () => {
   });
 
   test("should apply the correct brackgroun color", async ({ page }) => {
-    await expect(page.locator("body")).toHaveClass("bg-bgOficial");
+    await expect(page.locator("body")).toHaveClass("bg-bg-oficial");
   });
 
   test("should apply the correct padding and margin", async ({ page }) => {

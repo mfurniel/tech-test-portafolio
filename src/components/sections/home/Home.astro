@@ -15,12 +15,14 @@ import LinkedinIcon from "../../../../public/icons/linkedin.svg";
     alt="Imagen de perfil"
     height={160}
     width={160}
-    class="rounded-full border-2 border-blue-900"
+    class="border-title-primary rounded-full border-2 dark:border-gray-300"
     loading="eager"
   />
-  <h1 class="text-3xl font-bold text-blue-900">Mauricio Furniel Campos</h1>
-  <h2 class="text-xl font-semibold">Ingeniero Civil Informático</h2>
-  <p class="text-s font-bold text-gray-500">Universidad de Concepción</p>
+  <h1 class="text-title-primary text-3xl font-bold">Mauricio Furniel Campos</h1>
+  <h2 class="text-title-secondary text-xl font-semibold">
+    Ingeniero Civil Informático
+  </h2>
+  <p class="text-s text-title-tertiary font-bold">Universidad de Concepción</p>
   <div class="mt-2 flex space-x-6">
     <a
       href="https://github.com/mfurniel"
@@ -30,7 +32,7 @@ import LinkedinIcon from "../../../../public/icons/linkedin.svg";
     >
       <GithubIcon
         size={32}
-        class="h-8 w-8 text-blue-900 transition-all duration-500 hover:text-yellow-500"
+        class="text-title-primary h-8 w-8 transition-all duration-500 hover:text-yellow-500 dark:hover:text-blue-900"
         aria-label="Visitar perfil de Github"
       />
       <span class="sr-only">Visitar perfil de Github</span>
@@ -43,14 +45,14 @@ import LinkedinIcon from "../../../../public/icons/linkedin.svg";
     >
       <LinkedinIcon
         size={32}
-        class="h-8 w-8 text-blue-900 transition-all duration-500 hover:text-yellow-500"
+        class="text-title-primary h-8 w-8 transition-all duration-500 hover:text-yellow-500 dark:hover:text-blue-900"
         aria-label="Linkedin"
       />
       <span class="sr-only">Visitar perfil de LinkedIn</span>
     </a>
   </div>
   <div class="absolute bottom-12 flex list-none flex-col items-center gap-1">
-    <span class="text-md font-bold text-blue-900">Sigue Bajando!</span>
+    <span class="text-md text-title-primary font-bold">Sigue Bajando!</span>
     <SmoothScrollButton
       target="#about"
       icon="icons/scrollarrowtodown.svg"

@@ -14,12 +14,14 @@ import TechSkills from "./TechSkills.astro";
       height={232}
       width={210}
       alt="Imagen de perfil"
-      class="rounded-full border-2 border-blue-900 object-cover"
+      class="border-title-primary rounded-full border-2 object-cover"
     />
     <div
-      class="info-box text-md relative max-w-4xl rounded-lg bg-white p-8 text-justify shadow-lg lg:text-lg xl:text-xl"
+      class="info-box text-md bg-about-card relative max-w-4xl rounded-lg p-8 text-justify shadow-lg lg:text-lg xl:text-xl"
     >
-      <div class="flex flex-col items-center gap-4 md:items-start">
+      <div
+        class="text-paragraph-primary flex flex-col items-center gap-4 md:items-start"
+      >
         <p>
           ¡Hola! Soy Mauricio, Ingeniero Civil Informático titulado de la
           Universidad de Concepción, estoy enfocado en el desarrollo de
@@ -37,13 +39,13 @@ import TechSkills from "./TechSkills.astro";
           <h2>
             Algunas tecnologías con las que he estado trabajando recientemente:
           </h2>
-          <div class="flex space-x-16 pl-6">
-            <ul class="list-disc text-gray-700">
+          <div class="flex space-x-16 p-4">
+            <ul class="list-disc">
               <li>React</li>
               <li>Vue</li>
               <li>TypeScript</li>
             </ul>
-            <ul class="list-disc text-gray-700">
+            <ul class="list-disc">
               <li>Ruby and Rails</li>
               <li>Flutter</li>
               <li>Tailwind</li>
@@ -54,7 +56,7 @@ import TechSkills from "./TechSkills.astro";
           href="https://drive.google.com/file/d/1NsNn5XnQY9C3z0oJMXnSmip897n0QXmm/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
-          class="w-1/4 min-w-52 transform rounded-full bg-blue-900 px-6 py-3 text-center font-semibold text-white transition-transform duration-300 hover:scale-105 hover:bg-red-600"
+          class="bg-title-primary w-1/4 min-w-52 transform rounded-full px-6 py-3 text-center font-semibold text-white transition-transform duration-300 hover:scale-105 hover:bg-red-600 dark:bg-gray-300 dark:text-black dark:hover:bg-blue-900 dark:hover:text-white"
           aria-label="Descargar mi currículum vitae"
         >
           Descarga mi CV
@@ -69,10 +71,11 @@ import TechSkills from "./TechSkills.astro";
   .info-box::before {
     content: "";
     position: absolute;
+    top: 20px;
     left: -50px;
     transform: rotate(-90deg);
     border-width: 25px;
     border-style: solid;
-    border-color: transparent transparent white;
+    border-color: transparent transparent var(--color-about-card);
   }
 </style>

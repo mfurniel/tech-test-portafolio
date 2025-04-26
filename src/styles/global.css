@@ -2,5 +2,36 @@
 
 @theme {
   --color-glanz: #674d8a;
-  --color-bgOficial: #f9f7fd;
+  --color-bg-oficial: #f9f7fd;
+  --color-bg-side-custom-bar: #ffffff;
+  --color-title-primary: #1e40af;
+  --color-title-secondary: #000000;
+  --color-title-tertiary: #6b7280;
+  --color-paragraph-primary: #000000;
+  --color-about-card: #fefefe;
+  --color-bg-experience: #ffffff;
+  --color-tech-accent: #e7001b;
+  --color-techs-used: #1e40af;
+  --color-text-experience-selector-hover: #ff566a;
+  --color-bg-project-techs: #ef4444;
+  --color-overlay-color-card: #1e40af;
 }
+
+.dark {
+  --color-glanz: #a78bfa;
+  --color-bg-oficial: #202020;
+  --color-bg-side-custom-bar: #000000;
+  --color-title-primary: #ffffff;
+  --color-title-secondary: #d1d5db;
+  --color-title-tertiary: #1e40af;
+  --color-paragraph-primary: #ffffff;
+  --color-about-card: #383838;
+  --color-bg-experience: #383838;
+  --color-tech-accent: #3b82f6;
+  --color-techs-used: #cecece;
+  --color-text-experience-selector-hover: #3b82f6;
+  --color-bg-project-techs: #1038a7;
+  --color-overlay-color-card: #000000;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));

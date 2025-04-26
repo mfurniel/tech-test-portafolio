@@ -3,14 +3,14 @@
     <div
       v-for="(experience, index) in experiences"
       :key="index"
-      class="mb-1 rounded-tl-2xl rounded-bl-2xl hover:bg-blue-900/20 md:mb-3"
+      class="hover:bg-title-primary/20 mb-1 rounded-tl-2xl rounded-bl-2xl md:mb-3"
       :class="{
-        'bg-white shadow-md': selectedExperienceIndex === index,
+        'bg-bg-experience shadow-md': selectedExperienceIndex === index,
       }"
     >
       <button
         @click="selectExperience(index)"
-        class="h-full w-full p-2 pl-4 text-left text-xl font-semibold text-blue-900 hover:text-red-600 focus:outline-none md:p-4"
+        class="text-title-primary hover:text-text-experience-selector-hover h-full w-full p-2 pl-4 text-left text-xl font-semibold focus:outline-none md:p-4"
         :class="{
           'text-red-600': selectedExperienceIndex === index,
         }"

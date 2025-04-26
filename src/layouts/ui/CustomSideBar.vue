@@ -3,7 +3,7 @@
     <ToggleButton :isOpen="isSidebarOpen" @toggleAction="toggleSidebar" />
 
     <div
-      class="fixed top-0 left-0 flex h-screen w-28 transform flex-col items-center justify-between border border-gray-200 bg-white p-4 text-black transition-transform duration-300 ease-in-out lg:translate-x-0"
+      class="bg--bg-side-custom-bar fixed top-0 left-0 flex h-screen w-28 transform flex-col items-center justify-between border border-gray-200 p-4 text-black transition-transform duration-300 ease-in-out lg:translate-x-0"
       :class="{ '-translate-x-full': !isSidebarOpen }"
     >
       <SmoothScrollButton
@@ -60,11 +60,14 @@
         </ul>
       </nav>
 
-      <img
-        src="icons/moon.svg"
-        alt="Modo Oscuro"
-        class="invisible mb-6 h-8 w-8"
-      />
+      <img src="icons/moon.svg" alt="Modo Oscuro" class="mb-6 h-8 w-8" />
+      <button
+        id="theme-toggle"
+        class="rounded-md bg-gray-800 px-4 py-2 dark:bg-white"
+        @click="toggleTheme"
+      >
+        Toggle Theme
+      </button>
     </div>
   </aside>
 </template>
@@ -88,6 +91,20 @@ export default defineComponent({
   methods: {
     toggleSidebar(): void {
       this.isSidebarOpen = !this.isSidebarOpen;
+    },
+    toggleTheme(): void {
+      document.body.classList.toggle("dark");
+      if (document.body.classList.contains("dark")) {
+        localStorage.setItem("theme", "dark");
+      } else {
+        localStorage.setItem("theme", "light");
+      }
+    },
+    mounted() {
+      const storedTheme = localStorage.getItem("theme");
+      if (storedTheme === "dark") {
+        document.body.classList.add("dark");
+      }
     },
   },
 });
