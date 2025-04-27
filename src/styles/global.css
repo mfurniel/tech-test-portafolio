@@ -15,12 +15,13 @@
   --color-text-experience-selector-hover: #ff566a;
   --color-bg-project-techs: #ef4444;
   --color-overlay-color-card: #1e40af;
+  --color-icon-custom-bar: #000000;
 }
 
 .dark {
   --color-glanz: #a78bfa;
   --color-bg-oficial: #202020;
-  --color-bg-side-custom-bar: #000000;
+  --color-bg-side-custom-bar: #202020;
   --color-title-primary: #ffffff;
   --color-title-secondary: #d1d5db;
   --color-title-tertiary: #1e40af;
@@ -32,6 +33,7 @@
   --color-text-experience-selector-hover: #3b82f6;
   --color-bg-project-techs: #1038a7;
   --color-overlay-color-card: #000000;
+  --color-icon-custom-bar: #a7aeb9;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
