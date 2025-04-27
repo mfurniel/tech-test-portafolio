@@ -1,0 +1,85 @@
+export const languages = {
+  en: "English",
+  es: "Español",
+};
+
+export const defaultLang = "en";
+
+export const ui = {
+  en: {
+    "home.visitGithub": "Visit GitHub Profile",
+    "home.keepScrolling": "Keep scrolling!",
+
+    "section.homeTitle": "Home",
+    "section.aboutTitle": "About me",
+    "section.educationTitle": "Education",
+
+    "profile.profession": "Software Engineer",
+    "profile.university": "University of Concepción",
+
+    "about.greeting": "Hello!",
+    "about.introductionParagraph1":
+      "I'm Mauricio, a Software Engineer graduated from the University of Concepción, focused on software development. My journey has been incredible, and my goal is to continue growing professionally and constantly improving.",
+    "about.introductionParagraph2":
+      "Currently, I'm focusing on expanding my portfolio by creating interesting projects that allow me to continue learning. My work experience has taught me not only technical aspects but also the importance of communicating effectively, solving problems, and being part of a team.",
+    "about.technologiesTitle":
+      "Some technologies I've been working with recently:",
+    "about.technologiesList1Item1": "React",
+    "about.technologiesList1Item2": "Vue",
+    "about.technologiesList1Item3": "TypeScript",
+    "about.technologiesList2Item1": "Ruby and Rails",
+    "about.technologiesList2Item2": "Flutter",
+    "about.technologiesList2Item3": "Tailwind",
+    "about.downloadCV": "Download my CV",
+    "about.altProfileImage": "Profile Image",
+    "about.downloadCVLabel": "Download my curriculum vitae",
+
+    "education.title": "Education",
+    "education.salesiano.alt": "Salesiano Icon",
+    "education.salesiano.title": "Liceo Salesiano Domingo Savio",
+    "education.salesiano.description":
+      "My secondary education was completed at Liceo Salesiano Domingo Savio, Concepción, Chile.",
+    "education.udec.alt": "University of Concepción Icon",
+    "education.udec.title": "University of Concepción",
+    "education.udec.description":
+      "I am a Software Engineer, graduated in 2024 from the University of Concepción, located in Concepción, Chile, class of 2018.",
+  },
+  es: {
+    "home.visitGithub": "Visitar perfil de Github",
+    "home.keepScrolling": "Sigue Bajando!",
+
+    "section.homeTitle": "Inicio",
+    "section.aboutTitle": "Sobre mí",
+    "section.educationTitle": "Educación",
+
+    "profile.profession": "Ingeniero Civil Informático",
+    "profile.university": "Universidad de Concepción",
+
+    "about.greeting": "¡Hola!",
+    "about.introductionParagraph1":
+      "¡Hola! Soy Mauricio, Ingeniero Civil Informático titulado de la Universidad de Concepción, estoy enfocado en el desarrollo de software. Mi camino ha sido increíble, y mi objetivo es seguir creciendo como profesional y mejorar constantemente.",
+    "about.introductionParagraph2":
+      "Actualmente, me estoy enfocando en ampliar mi portafolio, creando proyectos interesantes que me permitan seguir aprendiendo. Mi experiencia laboral me ha enseñado no solo aspectos técnicos, sino también la importancia de comunicarme efectivamente, resolver problemas y ser parte de un equipo.",
+    "about.technologiesTitle":
+      "Algunas tecnologías con las que he estado trabajando recientemente:",
+    "about.technologiesList1Item1": "React",
+    "about.technologiesList1Item2": "Vue",
+    "about.technologiesList1Item3": "TypeScript",
+    "about.technologiesList2Item1": "Ruby and Rails",
+    "about.technologiesList2Item2": "Flutter",
+    "about.technologiesList2Item3": "Tailwind",
+    "about.downloadCV": "Descarga mi CV",
+    "about.altProfileImage": "Imagen de perfil",
+    "about.downloadCVLabel": "Descargar mi currículum vitae",
+
+    "education.title": "Educación",
+    "education.salesiano.alt": "Ícono Salesiano",
+    "education.salesiano.title": "Liceo Salesiano Domingo Savio",
+    "education.salesiano.description":
+      "Mi formación de educación media la realicé en el Liceo Salesiano Domingo Savio, Concepción, Chile.",
+    "education.udec.alt": "Ícono Universidad de Concepción",
+    "education.udec.title": "Universidad de Concepción",
+    "education.udec.description":
+      "Soy Ingeniero Civil Informático, titulado en 2024 de la Universidad de Concepción, ubicada en Concepción, Chile, correspondiente a la generación de 2018.",
+  },
+} as const;
