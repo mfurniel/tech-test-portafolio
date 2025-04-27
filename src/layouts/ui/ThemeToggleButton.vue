@@ -1,7 +1,7 @@
 <template>
   <div
     @click="toggleTheme"
-    class="mb-6 cursor-pointer hover:opacity-80 transition-opacity text-gray-500 dark:text-yellow-400"
+    class="mb-6 cursor-pointer text-gray-500 transition-opacity hover:opacity-80 dark:text-yellow-400"
   >
     <component :is="isDarkMode ? 'SunIcon' : 'MoonIcon'" />
   </div>
@@ -22,24 +22,26 @@ export default defineComponent({
     const isDarkMode = ref(false);
 
     const applyTheme = (theme: string) => {
-      if (theme === 'dark') {
-        document.body.classList.add('dark');
+      if (theme === "dark") {
+        document.body.classList.add("dark");
         isDarkMode.value = true;
       } else {
-        document.body.classList.remove('dark');
+        document.body.classList.remove("dark");
         isDarkMode.value = false;
       }
     };
 
     const toggleTheme = () => {
-      const newMode = isDarkMode.value ? 'light' : 'dark';
+      const newMode = isDarkMode.value ? "light" : "dark";
       applyTheme(newMode);
       localStorage.setItem("theme", newMode);
     };
 
     const checkSystemPreference = (): string => {
-      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      return systemPrefersDark ? 'dark' : 'light';
+      const systemPrefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      ).matches;
+      return systemPrefersDark ? "dark" : "light";
     };
 
     onMounted(() => {
@@ -47,10 +49,12 @@ export default defineComponent({
       const initialTheme = savedTheme || checkSystemPreference();
       applyTheme(initialTheme);
 
-      const colorSchemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
-      colorSchemeQuery.addEventListener('change', (e) => {
+      const colorSchemeQuery = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      );
+      colorSchemeQuery.addEventListener("change", (e) => {
         if (!localStorage.getItem("theme")) {
-          applyTheme(e.matches ? 'dark' : 'light');
+          applyTheme(e.matches ? "dark" : "light");
         }
       });
     });

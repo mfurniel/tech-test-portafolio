@@ -1,6 +1,9 @@
 <template>
   <button @click="smoothScroll" :aria-label="alt">
-    <component :is="iconComponent" class="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 text-icon-custom-bar" />
+    <component
+      :is="iconComponent"
+      class="text-icon-custom-bar h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8"
+    />
   </button>
 </template>
 

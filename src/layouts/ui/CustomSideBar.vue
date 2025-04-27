@@ -16,18 +16,10 @@
       <nav>
         <ul class="flex flex-col items-center gap-6">
           <li>
-            <SmoothScrollButton
-              target="#home"
-              icon="home"
-              alt="Inicio"
-            />
+            <SmoothScrollButton target="#home" icon="home" alt="Inicio" />
           </li>
           <li>
-            <SmoothScrollButton
-              target="#about"
-              icon="profile"
-              alt="Sobre Mí"
-            />
+            <SmoothScrollButton target="#about" icon="profile" alt="Sobre Mí" />
           </li>
           <li>
             <SmoothScrollButton
