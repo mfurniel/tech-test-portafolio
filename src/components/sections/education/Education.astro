@@ -3,22 +3,25 @@ import EducationCard from "./ui/EducationCard.astro";
 import salesianoIcon from "../../../../public/icons/salesiano.webp";
 import udecIcon from "../../../../public/icons/udec.webp";
 import SectionContainer from "../../shared/SectionContainer.astro";
+import { initTranslations } from "../../../i18n/initTranslations";
+
+const { t } = initTranslations(Astro);
 ---
 
-<SectionContainer title="Educación" idSection="education">
+<SectionContainer title={t("section.educationTitle")} idSection="education">
   <div class="grid grid-cols-1 gap-6 text-white lg:grid-cols-2">
     <EducationCard
       imageSrc={salesianoIcon}
-      altText="Salesiano Icon"
-      title="Liceo Salesiano Domingo Savio"
-      description="Mi formación de educación media la realicé en el Liceo Salesiano Domingo Savio, Concepción, Chile."
+      altText={t("education.salesiano.alt")}
+      title={t("education.salesiano.title")}
+      description={t("education.salesiano.description")}
       bgColor="bg-blue-950"
     />
     <EducationCard
       imageSrc={udecIcon}
-      altText="Universidad de Concepción Icon"
-      title="Universidad de Concepción"
-      description="Soy Ingeniero Civil Informático, titulado en 2024 de la Universidad de Concepción, ubicada en Concepción, Chile, correspondiente a la generación de 2018."
+      altText={t("education.udec.alt")}
+      title={t("education.udec.title")}
+      description={t("education.udec.description")}
       bgColor="bg-orange-700"
     />
   </div>

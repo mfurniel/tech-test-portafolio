@@ -3,9 +3,12 @@ import { Image } from "astro:assets";
 import profileImage from "../../../../public/images/profileAbout.webp";
 import SectionContainer from "../../shared/SectionContainer.astro";
 import TechSkills from "./TechSkills.astro";
+import { initTranslations } from "../../../i18n/initTranslations";
+
+const { t } = initTranslations(Astro);
 ---
 
-<SectionContainer title="Sobre mí" idSection="about">
+<SectionContainer title={t("section.aboutTitle")} idSection="about">
   <div
     class="flex flex-col items-center justify-center gap-6 lg:flex-row lg:items-start"
   >
@@ -13,7 +16,7 @@ import TechSkills from "./TechSkills.astro";
       src={profileImage}
       height={232}
       width={210}
-      alt="Imagen de perfil"
+      alt={t("about.altProfileImage")}
       class="border-title-primary rounded-full border-2 object-cover"
     />
     <div
@@ -23,32 +26,25 @@ import TechSkills from "./TechSkills.astro";
         class="text-paragraph-primary flex flex-col items-center gap-4 md:items-start"
       >
         <p>
-          ¡Hola! Soy Mauricio, Ingeniero Civil Informático titulado de la
-          Universidad de Concepción, estoy enfocado en el desarrollo de
-          software. Mi camino ha sido increíble, y mi objetivo es seguir
-          creciendo como profesional y mejorar constantemente.
+          {t("about.introductionParagraph1")}
         </p>
         <p>
-          Actualmente, me estoy enfocando en ampliar mi portafolio, creando
-          proyectos interesantes que me permitan seguir aprendiendo. Mi
-          experiencia laboral me ha enseñado no solo aspectos técnicos, sino
-          también la importancia de comunicarme efectivamente, resolver
-          problemas y ser parte de un equipo.
+          {t("about.introductionParagraph2")}
         </p>
         <div>
           <h2>
-            Algunas tecnologías con las que he estado trabajando recientemente:
+            {t("about.technologiesTitle")}
           </h2>
           <div class="flex space-x-16 p-4">
             <ul class="list-disc">
-              <li>React</li>
-              <li>Vue</li>
-              <li>TypeScript</li>
+              <li>{t("about.technologiesList1Item1")}</li>
+              <li>{t("about.technologiesList1Item2")}</li>
+              <li>{t("about.technologiesList1Item3")}</li>
             </ul>
             <ul class="list-disc">
-              <li>Ruby and Rails</li>
-              <li>Flutter</li>
-              <li>Tailwind</li>
+              <li>{t("about.technologiesList2Item1")}</li>
+              <li>{t("about.technologiesList2Item2")}</li>
+              <li>{t("about.technologiesList2Item3")}</li>
             </ul>
           </div>
         </div>
@@ -57,9 +53,9 @@ import TechSkills from "./TechSkills.astro";
           target="_blank"
           rel="noopener noreferrer"
           class="bg-title-primary w-1/4 min-w-52 transform rounded-full px-6 py-3 text-center font-semibold text-white transition-transform duration-300 hover:scale-105 hover:bg-red-600 dark:bg-gray-300 dark:text-black dark:hover:bg-blue-900 dark:hover:text-white"
-          aria-label="Descargar mi currículum vitae"
+          aria-label={t("about.downloadCVLabel")}
         >
-          Descarga mi CV
+          {t("about.downloadCV")}
         </a>
       </div>
     </div>

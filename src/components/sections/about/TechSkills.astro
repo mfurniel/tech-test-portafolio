@@ -1,6 +1,9 @@
 ---
 import TechBox from "./ui/TechBox.astro";
 import { techs } from "../../../data/techs";
+import { initTranslations } from "../../../i18n/initTranslations";
+
+const { lang } = initTranslations(Astro);
 ---
 
 <div
@@ -9,9 +12,9 @@ import { techs } from "../../../data/techs";
   {
     techs.map((tech) => (
       <TechBox
-        name={tech.name}
+        name={tech.name[lang]}
         icon={tech.icon}
-        description={tech.description}
+        description={tech.description[lang]}
       />
     ))
   }

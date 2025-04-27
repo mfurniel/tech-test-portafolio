@@ -13,26 +13,79 @@ import htmlIcon from "../../public/icons/html.svg";
 import type { ImageMetadata } from "astro";
 
 export interface Tech {
-  name: string;
   icon: ImageMetadata;
-  description: string;
+  name: {
+    en: string;
+    es: string;
+  };
+  description: {
+    en: string;
+    es: string;
+  };
 }
 
 export const techs: Tech[] = [
-  { name: "Git", icon: gitIcon, description: "Control de Versiones" },
-  { name: "GitHub", icon: githubIcon, description: "Repositorios" },
-  { name: "Flutter", icon: flutterIcon, description: "Práctica Profesional" },
-  { name: "React", icon: reactIcon, description: "Memoria de Título" },
-  { name: "Vue", icon: vueIcon, description: "Trabajando en Eskuad" },
-  { name: "JavaScript", icon: jsIcon, description: "Memoria de Título" },
   {
-    name: "TypeScript",
-    icon: tsIcon,
-    description: "Aplicado a Proyectos Personales",
+    icon: gitIcon,
+    name: { en: "Git", es: "Git" },
+    description: { en: "Version Control", es: "Control de Versiones" },
   },
-  { name: "Ruby on Rails", icon: railsIcon, description: "Proyecto Personal" },
-  { name: "PostgreSQL", icon: postgresIcon, description: "Base de datos Pyme" },
-  { name: "Python", icon: pythonIcon, description: "Api Rest con Flask" },
-  { name: "CSS", icon: cssIcon, description: "Estilo y Diseño" },
-  { name: "HTML", icon: htmlIcon, description: "Estructura Web" },
+  {
+    icon: githubIcon,
+    name: { en: "GitHub", es: "GitHub" },
+    description: { en: "Repositories", es: "Repositorios" },
+  },
+  {
+    icon: flutterIcon,
+    name: { en: "Flutter", es: "Flutter" },
+    description: { en: "Professional Practice", es: "Práctica Profesional" },
+  },
+  {
+    icon: reactIcon,
+    name: { en: "React", es: "React" },
+    description: { en: "Title Thesis", es: "Memoria de Título" },
+  },
+  {
+    icon: vueIcon,
+    name: { en: "Vue", es: "Vue" },
+    description: { en: "Working at Eskuad", es: "Trabajando en Eskuad" },
+  },
+  {
+    icon: jsIcon,
+    name: { en: "JavaScript", es: "JavaScript" },
+    description: { en: "Title Thesis", es: "Memoria de Título" },
+  },
+  {
+    icon: tsIcon,
+    name: { en: "TypeScript", es: "TypeScript" },
+    description: {
+      en: "Applied to Personal Projects",
+      es: "Aplicado a Proyectos Personales",
+    },
+  },
+  {
+    icon: railsIcon,
+    name: { en: "Ruby on Rails", es: "Ruby on Rails" },
+    description: { en: "Personal Project", es: "Proyecto Personal" },
+  },
+  {
+    icon: postgresIcon,
+    name: { en: "PostgreSQL", es: "PostgreSQL" },
+    description: { en: "SME Database", es: "Base de datos Pyme" },
+  },
+  {
+    icon: pythonIcon,
+    name: { en: "Python", es: "Python" },
+    description: { en: "Flask REST API", es: "Api Rest con Flask" },
+  },
+  {
+    icon: cssIcon,
+    name: { en: "CSS", es: "CSS" },
+    description: { en: "Style and Design", es: "Estilo y Diseño" },
+  },
+  {
+    icon: htmlIcon,
+    name: { en: "HTML", es: "HTML" },
+    description: { en: "Web Structure", es: "Estructura Web" },
+  },
 ];
