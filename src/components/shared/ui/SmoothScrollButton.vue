@@ -16,6 +16,7 @@ import EducationIcon from "../../../assets/icons/EducationIcon.vue";
 import PortfolioIcon from "../../../assets/icons/PortfolioIcon.vue";
 import BackpackIcon from "../../../assets/icons/BackpackIcon.vue";
 import StackIcon from "../../../assets/icons/StackIcon.vue";
+import ScrollArrowToDownIcon from "../../../assets/icons/ScrollarrowtodownIcon.vue";
 
 export default defineComponent({
   name: "SmoothScrollButton",
@@ -27,6 +28,7 @@ export default defineComponent({
     PortfolioIcon,
     BackpackIcon,
     StackIcon,
+    ScrollArrowToDownIcon,
   },
   props: {
     target: {
@@ -59,6 +61,8 @@ export default defineComponent({
           return BackpackIcon;
         case "stack":
           return StackIcon;
+        case "scrollarrowtodown":
+          return ScrollArrowToDownIcon;
         default:
           return null;
       }
