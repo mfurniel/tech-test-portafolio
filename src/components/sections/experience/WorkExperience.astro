@@ -6,7 +6,7 @@ import { experiences as enExperiences } from "../../../data/en/experiences";
 
 import { initTranslations } from "../../../i18n/initTranslations";
 
-const { lang } = initTranslations(Astro);
+const { t, lang } = initTranslations(Astro);
 
 function getTechsByLang(lang: string) {
   if (lang === "es") {
@@ -21,6 +21,9 @@ function getTechsByLang(lang: string) {
 const currentExperencies = getTechsByLang(lang);
 ---
 
-<SectionContainer title="Experiencia" idSection="work_experience">
+<SectionContainer
+  title={t("section.experienceTitle")}
+  idSection="work_experience"
+>
   <Experience client:load experiences={currentExperencies} />
 </SectionContainer>

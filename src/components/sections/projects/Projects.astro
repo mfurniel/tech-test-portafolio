@@ -5,15 +5,18 @@ import portfolioProject from "../../../../public/images/portfolioReactProject.we
 import dashboardProject from "../../../../public/images/dashboardProject.webp";
 import techTestPortafolio from "../../../../public/images/techTestPortafolio.webp";
 import SectionContainer from "../../shared/SectionContainer.astro";
+import { initTranslations } from "../../../i18n/initTranslations";
+
+const { t } = initTranslations(Astro);
 ---
 
-<SectionContainer title="Proyectos" idSection="projects">
+<SectionContainer title={t("section.projectsTitle")} idSection="projects">
   <div
     class="grid grid-cols-1 place-items-center gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3"
   >
     <ProjectCard
-      title="Glanz Optical Calculator Transposition"
-      description="Glanz es una aplicación móvil creada para realizar el cálculo de la transposición óptica de recetas de lentes. Actualmente está disponible en la Play Store."
+      title={t("projects.glanz.title")}
+      description={t("projects.glanz.description")}
       image={glanzProject}
       bgColor="bg-[#674d8a]"
       overlayColor="bg-overlay-color-card/80"
@@ -21,8 +24,8 @@ import SectionContainer from "../../shared/SectionContainer.astro";
       techs={["Flutter", "Dart"]}
     />
     <ProjectCard
-      title="Personal Portfolio Website"
-      description="Un portafolio personal creado para mostrar proyectos y habilidades como desarrollador web, utilizando tecnologías modernas."
+      title={t("projects.portfolio.title")}
+      description={t("projects.portfolio.description")}
       image={portfolioProject}
       bgColor="bg-gray-200"
       overlayColor="bg-overlay-color-card/80"
@@ -30,16 +33,16 @@ import SectionContainer from "../../shared/SectionContainer.astro";
       techs={["React", "Tailwind", "JavaScript"]}
     />
     <ProjectCard
-      title="Dashboard de Adherencia"
-      description="Dashboard creado para mostrar la adherencia de los pacientes a sus tratamientos médicos."
+      title={t("projects.dashboard.title")}
+      description={t("projects.dashboard.description")}
       image={dashboardProject}
       bgColor="bg-gray-200"
       overlayColor="bg-overlay-color-card/80"
       techs={["React", "Tailwind", "JavaScript"]}
     />
     <ProjectCard
-      title="Portofolio de Prueba Técnica"
-      description="Un portafolio personal creado como parte de una prueba técnica. ¡Estoy trabajando en este proyecto ahora mismo!"
+      title={t("projects.techTestPortfolio.title")}
+      description={t("projects.techTestPortfolio.description")}
       image={techTestPortafolio}
       bgColor="bg-gray-200"
       overlayColor="bg-overlay-color-card/80"
