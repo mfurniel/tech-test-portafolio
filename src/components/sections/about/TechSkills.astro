@@ -1,13 +1,29 @@
 ---
 import TechBox from "./ui/TechBox.astro";
-import { techs } from "../../../data/es/techs";
+import { techs as esTechs } from "../../../data/es/techs";
+import { techs as enTechs } from "../../../data/en/techs";
+import { initTranslations } from "../../../i18n/initTranslations";
+
+const { lang } = initTranslations(Astro);
+
+function getTechsByLang(lang: string) {
+  if (lang === "es") {
+    return esTechs;
+  } else if (lang === "en") {
+    return enTechs;
+  } else {
+    return enTechs;
+  }
+}
+
+const currentTechs = getTechsByLang(lang);
 ---
 
 <div
   class="mt-8 mb-8 grid grid-cols-2 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6"
 >
   {
-    techs.map((tech) => (
+    currentTechs.map((tech) => (
       <TechBox
         name={tech.name}
         icon={tech.icon}

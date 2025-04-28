@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { experiences } from "../../../data/experiences";
+import { experiences } from "../../../data/es/experiences";
 
 test.describe("Experience Section", () => {
   const experienceSelector = "#work_experience";

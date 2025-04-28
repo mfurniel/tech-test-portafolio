@@ -1,12 +1,28 @@
 ---
 import SectionContainer from "../../shared/SectionContainer.astro";
 import Experience from "./ui/Experience.vue";
-import { experiencesAcademyc } from "../../../data/experiences";
+import { experiencesAcademyc as esExperiencesAcademyc } from "../../../data/es/experiences";
+import { experiencesAcademyc as enExperiencesAcademyc } from "../../../data/en/experiences";
+import { initTranslations } from "../../../i18n/initTranslations";
+
+const { lang } = initTranslations(Astro);
+
+function getTechsByLang(lang: string) {
+  if (lang === "es") {
+    return esExperiencesAcademyc;
+  } else if (lang === "en") {
+    return enExperiencesAcademyc;
+  } else {
+    return enExperiencesAcademyc;
+  }
+}
+
+const currentExperencies = getTechsByLang(lang);
 ---
 
 <SectionContainer
   title="Actividades Académicas"
   idSection="academic_experience"
 >
-  <Experience client:load experiences={experiencesAcademyc} />
+  <Experience client:load experiences={currentExperencies} />
 </SectionContainer>
