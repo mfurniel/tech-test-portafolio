@@ -7,6 +7,9 @@ export const defaultLang = "en";
 
 export const ui = {
   en: {
+    "layout.pageDescription":
+      "Web Portfolio of a junior software developer using technologies such as Astro, Vue, Tailwind, and Typescript.",
+
     "home.visitGithub": "Visit GitHub Profile",
     "home.keepScrolling": "Keep scrolling!",
 
@@ -60,6 +63,9 @@ export const ui = {
       "A personal portfolio created as part of a technical test. I'm currently working on this project!",
   },
   es: {
+    "layout.pageDescription":
+      "Web Portfolio of a junior software developer using technologies such as Astro, Vue, Tailwind, and Typescript.",
+
     "home.visitGithub": "Visitar perfil de Github",
     "home.keepScrolling": "Sigue Bajando!",
 

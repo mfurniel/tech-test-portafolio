@@ -1,19 +1,20 @@
 ---
 import "../styles/global.css";
 import CustomSideBar from "./ui/CustomSideBar.vue";
-const pageDescription =
-  "Portafolio Web de un desarrollador de software junior utilizando tecnologias como Astro, Vue, Tailwind y Typescript.";
+import { initTranslations } from "../i18n/initTranslations";
+
+const { t, lang } = initTranslations(Astro);
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/icons/logo.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Tech Test Portafolio</title>
-    <meta name="description" content={pageDescription} />
+    <meta name="description" content={t("layout.pageDescription")} />
   </head>
   <body class="bg-bg-oficial">
     <CustomSideBar client:load />
