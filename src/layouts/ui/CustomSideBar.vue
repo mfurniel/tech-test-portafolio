@@ -51,8 +51,10 @@
           </li>
         </ul>
       </nav>
-
-      <ThemeToggleButton />
+      <div class="flex flex-col items-center gap-6">
+        <LanguagePicker />
+        <ThemeToggleButton />
+      </div>
     </div>
   </aside>
 </template>
@@ -62,6 +64,7 @@ import { defineComponent } from "vue";
 import SmoothScrollButton from "../../components/shared/ui/SmoothScrollButton.vue";
 import ToggleButton from "./ToggleButton.vue";
 import ThemeToggleButton from "./ThemeToggleButton.vue";
+import LanguagePicker from "./LanguagePicker.vue";
 
 export default defineComponent({
   name: "CustomSideBar",
@@ -69,6 +72,7 @@ export default defineComponent({
     SmoothScrollButton,
     ToggleButton,
     ThemeToggleButton,
+    LanguagePicker,
   },
   data() {
     return {
