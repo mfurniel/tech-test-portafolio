@@ -5,7 +5,10 @@
       :selectedExperienceIndex="selectedExperienceIndex"
       @select-experience="toggleVisibility"
     />
-    <ExperienceDescription :experience="selectedExperience" :techsUsedText="techsUsedText" />
+    <ExperienceDescription
+      :experience="selectedExperience"
+      :techsUsedText="techsUsedText"
+    />
   </div>
 </template>
 
