@@ -5,7 +5,7 @@
       :selectedExperienceIndex="selectedExperienceIndex"
       @select-experience="toggleVisibility"
     />
-    <ExperienceDescription :experience="selectedExperience" />
+    <ExperienceDescription :experience="selectedExperience" :techsUsedText="techsUsedText" />
   </div>
 </template>
 
@@ -31,6 +31,10 @@ export default defineComponent({
   props: {
     experiences: {
       type: Array as PropType<Experience[]>,
+      required: true,
+    },
+    techsUsedText: {
+      type: String,
       required: true,
     },
   },

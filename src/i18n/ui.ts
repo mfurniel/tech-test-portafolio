@@ -49,6 +49,8 @@ export const ui = {
     "education.udec.description":
       "I am a Software Engineer, graduated in 2024 from the University of Concepción, located in Concepción, Chile, class of 2018.",
 
+    "experience.tech.used": " Technologies used",
+
     "projects.glanz.title": "Glanz Optical Calculator Transposition",
     "projects.glanz.description":
       "Glanz is a mobile app created to calculate the optical transposition of lens prescriptions. It is currently available on the Play Store.",
@@ -104,6 +106,8 @@ export const ui = {
     "education.udec.title": "Universidad de Concepción",
     "education.udec.description":
       "Soy Ingeniero Civil Informático, titulado en 2024 de la Universidad de Concepción, ubicada en Concepción, Chile, correspondiente a la generación de 2018.",
+
+    "experience.tech.used": " Tecnologías utilizadas",
 
     "projects.glanz.title": "Calculadora Óptica Glanz",
     "projects.glanz.description":

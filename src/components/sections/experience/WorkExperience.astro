@@ -25,5 +25,9 @@ const currentExperencies = getTechsByLang(lang);
   title={t("section.experienceTitle")}
   idSection="work_experience"
 >
-  <Experience client:load experiences={currentExperencies} />
+  <Experience
+    client:load
+    experiences={currentExperencies}
+    techsUsedText={t("experience.tech.used")}
+  />
 </SectionContainer>

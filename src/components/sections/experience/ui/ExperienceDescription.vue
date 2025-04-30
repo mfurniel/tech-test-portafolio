@@ -23,7 +23,7 @@
           v-if="experience.technologies"
           class="text-techs-used text-lg font-semibold md:text-xl"
         >
-          Tecnologías utilizadas:
+          {{ techsUsedText }}:
           <span
             v-for="(technology, i) in experience.technologies"
             :key="i"
@@ -55,6 +55,10 @@ export default defineComponent({
   props: {
     experience: {
       type: Object as PropType<Experience | null>,
+      required: true,
+    },
+    techsUsedText: {
+      type: String,
       required: true,
     },
   },
