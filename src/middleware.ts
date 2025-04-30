@@ -1,22 +1,16 @@
-import { defineMiddleware } from "astro:middleware";
+import { defineMiddleware } from "astro/middleware";
 
 export const onRequest = defineMiddleware((context, next) => {
-  const url = new URL(context.request.url);
+  const { pathname } = context.url;
+  const allowedRoutes = ["/", "/es/", "/en/"];
 
-  const excludedPaths = ["/robots.txt", "/_image"];
-
-  if (excludedPaths.some((path) => url.pathname.startsWith(path))) {
+  if (
+    allowedRoutes.includes(pathname) ||
+    pathname === "/robots.txt" ||
+    pathname.startsWith("/_image")
+  ) {
     return next();
   }
 
-  if (url.pathname !== "/") {
-    return new Response(null, {
-      status: 302,
-      headers: {
-        Location: "/",
-      },
-    });
-  }
-
-  return next();
+  return Response.redirect(new URL("/", context.url), 302);
 });
