@@ -34,7 +34,7 @@ test.describe("Home Section (#home)", () => {
       });
 
       test("Should display the university", async ({ page }) => {
-        const university = page.locator(`${homeSelector} p.text-s`);
+        const university = page.locator(`${homeSelector} p.text-base`);
         await expect(university).toBeVisible();
         await expect(university).toHaveText(t["profile.university"]);
       });
