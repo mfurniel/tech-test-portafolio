@@ -13,6 +13,7 @@ export const ui = {
     "home.alt.profile.image": "Profile image of Mauricio Furniel Campos",
     "home.arial.label.github": "Visit GitHub Profile",
     "home.arial.label.linkedin": "Visit Linkedin Profile",
+    "home.icon.alt.scrolling": "About me!",
     "home.text.keep.scrolling": "Keep scrolling!",
 
     "section.homeTitle": "Home",
@@ -73,6 +74,7 @@ export const ui = {
     "home.alt.profile.image": "Imagen de perfil de Mauricio Furniel Campos",
     "home.arial.label.github": "Visitar perfil de Github",
     "home.arial.label.linkedin": "Visitar perfil de LinkedIn",
+    "home.icon.alt.scrolling": "Sobre mí!",
     "home.text.keep.scrolling": "Sigue Bajando!",
 
     "section.homeTitle": "Inicio",
