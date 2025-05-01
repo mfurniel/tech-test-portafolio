@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
-import { ui } from "../../../i18n/ui";
+import { ui, languages } from "../../../i18n/ui";
 
-const langs = ["es", "en"] as const;
+const langs = Object.keys(languages) as Array<keyof typeof languages>;
 
 test.describe("Project Section (#projects)", () => {
   const projectSelector = "#projects";

@@ -10,8 +10,10 @@ export const ui = {
     "layout.pageDescription":
       "Web Portfolio of a junior software developer using technologies such as Astro, Vue, Tailwind, and Typescript.",
 
-    "home.visitGithub": "Visit GitHub Profile",
-    "home.keepScrolling": "Keep scrolling!",
+    "home.alt.profile.image": "Profile image of Mauricio Furniel Campos",
+    "home.arial.label.github": "Visit GitHub Profile",
+    "home.arial.label.linkedin": "Visit Linkedin Profile",
+    "home.text.keep.scrolling": "Keep scrolling!",
 
     "section.homeTitle": "Home",
     "section.aboutTitle": "About me",
@@ -68,8 +70,10 @@ export const ui = {
     "layout.pageDescription":
       "Web Portfolio of a junior software developer using technologies such as Astro, Vue, Tailwind, and Typescript.",
 
-    "home.visitGithub": "Visitar perfil de Github",
-    "home.keepScrolling": "Sigue Bajando!",
+    "home.alt.profile.image": "Imagen de perfil de Mauricio Furniel Campos",
+    "home.arial.label.github": "Visitar perfil de Github",
+    "home.arial.label.linkedin": "Visitar perfil de LinkedIn",
+    "home.text.keep.scrolling": "Sigue Bajando!",
 
     "section.homeTitle": "Inicio",
     "section.aboutTitle": "Sobre mí",
