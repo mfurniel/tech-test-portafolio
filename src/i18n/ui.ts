@@ -19,7 +19,7 @@ export const ui = {
     "section.aboutTitle": "About me",
     "section.experienceTitle": "Experience",
     "section.academicExperienceTitle": "Academic Activities",
-    "section.educationTitle": "Education",
+    "section.education.title": "Education",
     "section.projectsTitle": "Projects",
 
     "profile.profession": "Software Engineer",
@@ -79,7 +79,7 @@ export const ui = {
     "section.aboutTitle": "Sobre mí",
     "section.experienceTitle": "Experiencia",
     "section.academicExperienceTitle": "Actividades Académicas",
-    "section.educationTitle": "Educación",
+    "section.education.title": "Educación",
     "section.projectsTitle": "Proyectos",
 
     "profile.profession": "Ingeniero Civil Informático",
